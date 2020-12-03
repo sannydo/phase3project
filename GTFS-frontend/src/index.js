@@ -15,7 +15,6 @@ function addTilesToPage(tiles){
     tiles.forEach(function renderTile(tileData){
         console.log(tileData)
         const shoeTile = document.createElement('article')
-        
 
         const shoeName = document.createElement('h3')
         shoeName.innerText = `${tileData.name}`
@@ -32,13 +31,10 @@ function addTilesToPage(tiles){
         shoeImage.src = `${tileData.image_url}`
 
         shoeName.addEventListener('click', function(event){
-            console.log(event.target)
-            if (event.target != addToCartButton){
                 //Sanny
-                console.log(event.target)
-                clearPage()
-                renderItemPage()//event.target.item
-            }
+            console.log(event.target)
+            clearPage()
+            renderItemPage(tileData)//event.target.item
         })
 
         shoeTile.appendChild(shoeImage)
@@ -49,10 +45,57 @@ function addTilesToPage(tiles){
         shoeTileParent.appendChild(shoeTile)
     })
 }
+
+function renderItemPage(tileData){
+    const banner = document.querySelector('#banner')
+    console.log(banner)
+    let content = banner.querySelector('.content')
+    // console.log(content)
+    let header = content.querySelector('header')
+    
+    let itemTitle = header.querySelector('h1')
+    itemTitle.innerText = tileData.name
+
+    let itemPrice = header.querySelector('p')
+    itemPrice.innerText = `${tileData.price}`
+
+    let itemDescription = content.querySelector('#item-description')
+    itemDescription.innerText = `placeholder item description`
+
+    let buttonParentUl = content.querySelector('ul')
+
+    let addToCartButton = buttonParentUl.querySelector('a')
+    addToCartButton.innerText = "Add To Cart"
+
+    // const shoeTile = document.createElement('article')
+        
+    // const shoeName = document.createElement('h3')
+    // shoeName.innerText = `${tileData.name}`
+
+    // const shoePrice = document.createElement('p')
+    // shoePrice.innerText = `${tileData.price}`
+    // const addToCartButton = document.createElement('button')
+    // addToCartButton.innerText = "Add To Cart"
+    // addToCartButton.addEventListener('click', function(event){
+    //     console.log(event.target)
+    // })
+
+    // const shoeImage = document.createElement('img')
+    // shoeImage.src = `${tileData.image_url}`
+    // shoeTile.appendChild(shoeImage)
+    // shoeTile.appendChild(shoeName)
+    // shoeTile.appendChild(shoePrice)
+    // shoeTile.appendChild(addToCartButton)
+    // // debugger
+    // shoeTileParent.appendChild(shoeTile)
+}
     
 function clearPage(){
-    const main = document.querySelector('.is-preload')
-    removeAllChildNodes(main)
+    console.log("You made it")
+    
+    // removeAllChildNodes(banner)
+    const productList = document.querySelector('#product-list')
+    removeAllChildNodes(productList)
 }
     // function addPictureToPage(data) {
     //     // const imageCard = document.querySelector('.image-card')
