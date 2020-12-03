@@ -1,0 +1,1565 @@
+Started GET "/users" for ::1 at 2020-12-02 11:34:42 -0600
+  [1m[35m (16.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2020-12-02 11:34:43 -0600
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-12-02 11:34:47 -0600
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2020-12-02 11:34:47 -0600
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/rails/actions" for ::1 at 2020-12-02 11:34:49 -0600
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (17.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShoes (20201202171907)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "shoes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "brand" varchar, "image_url" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202171907"]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShoppingCarts (20201202172039)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "shopping_carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_8228391db2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_carts_on_user_id" ON "shopping_carts" ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172039"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShoppingCartShoes (20201202172132)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "shopping_cart_shoes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "shopping_cart_id" integer NOT NULL, "shoe_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_2cec627373"
+FOREIGN KEY ("shopping_cart_id")
+  REFERENCES "shopping_carts" ("id")
+, CONSTRAINT "fk_rails_e91ddd2d97"
+FOREIGN KEY ("shoe_id")
+  REFERENCES "shoes" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_shopping_cart_shoes_on_shopping_cart_id" ON "shopping_cart_shoes" ("shopping_cart_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_cart_shoes_on_shoe_id" ON "shopping_cart_shoes" ("shoe_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172132"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateComments (20201202172233)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "shoe_id" integer NOT NULL, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_709ed0d446"
+FOREIGN KEY ("shoe_id")
+  REFERENCES "shoes" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_shoe_id" ON "comments" ("shoe_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172233"]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20201202172832)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "username" varchar, "password" varchar, "shoe_size" integer, "shoe_width" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172832"]]
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-02 17:34:50.632466"], ["updated_at", "2020-12-02 17:34:50.632466"]]
+  [1m[35m (14.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2020-12-02 11:34:50 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ariel/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ariel/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 29.9ms | Allocations: 201)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms | Allocations: 872)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-12-02 11:34:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-12-02 11:34:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-12-02 11:37:35 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 33ms (Views: 11.8ms | ActiveRecord: 1.7ms | Allocations: 1851)
+
+
+Started GET "/users" for ::1 at 2020-12-02 11:41:05 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 798)
+
+
+Started GET "/users" for ::1 at 2020-12-02 11:41:08 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 789)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/users" for ::1 at 2020-12-02 11:41:36 -0600
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.9ms | Allocations: 1680)
+
+
+Started GET "/users" for ::1 at 2020-12-02 11:42:40 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 806)
+
+
+Started GET "/users" for ::1 at 2020-12-02 11:42:41 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 806)
+
+
+Started GET "/users" for ::1 at 2020-12-02 11:42:45 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 806)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "shoe_size", "shoe_width", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ariel Grubbs"], ["username", "ArielVG"], ["password", "1234"], ["shoe_size", 10], ["shoe_width", "C"], ["created_at", "2020-12-02 17:52:03.052953"], ["updated_at", "2020-12-02 17:52:03.052953"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users" for ::1 at 2020-12-02 11:52:28 -0600
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.9ms | Allocations: 9901)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Ariel Grubbs":String):
+  
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/users" for ::1 at 2020-12-02 11:54:15 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms | Allocations: 1901)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Ariel Grubbs":String):
+  
+app/controllers/users_controller.rb:4:in `index'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "shoe_size", "shoe_width", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ariel Grubbs"], ["username", "ArielVG"], ["password", "1234"], ["shoe_size", 10], ["shoe_width", "C"], ["created_at", "2020-12-02 17:56:43.551664"], ["updated_at", "2020-12-02 17:56:43.551664"]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "shoe_size", "shoe_width", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dominique Brisco"], ["username", "dbrisco93"], ["password", "1234"], ["shoe_size", 9], ["shoe_width", "C"], ["created_at", "2020-12-02 17:56:43.564318"], ["updated_at", "2020-12-02 17:56:43.564318"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (19.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShoes (20201202171907)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "shoes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "brand" varchar, "image_url" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202171907"]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShoppingCarts (20201202172039)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "shopping_carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_8228391db2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_shopping_carts_on_user_id" ON "shopping_carts" ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172039"]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShoppingCartShoes (20201202172132)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "shopping_cart_shoes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "shopping_cart_id" integer NOT NULL, "shoe_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_2cec627373"
+FOREIGN KEY ("shopping_cart_id")
+  REFERENCES "shopping_carts" ("id")
+, CONSTRAINT "fk_rails_e91ddd2d97"
+FOREIGN KEY ("shoe_id")
+  REFERENCES "shoes" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_shopping_cart_shoes_on_shopping_cart_id" ON "shopping_cart_shoes" ("shopping_cart_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_shopping_cart_shoes_on_shoe_id" ON "shopping_cart_shoes" ("shoe_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172132"]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateComments (20201202172233)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "shoe_id" integer NOT NULL, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_709ed0d446"
+FOREIGN KEY ("shoe_id")
+  REFERENCES "shoes" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_shoe_id" ON "comments" ("shoe_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172233"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20201202172832)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "username" varchar, "password" varchar, "shoe_size" integer, "shoe_width" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172832"]]
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-02 17:58:54.674507"], ["updated_at", "2020-12-02 17:58:54.674507"]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "shoe_size", "shoe_width", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ariel Grubbs"], ["username", "ArielVG"], ["password", "1234"], ["shoe_size", 10], ["shoe_width", "C"], ["created_at", "2020-12-02 17:59:13.995434"], ["updated_at", "2020-12-02 17:59:13.995434"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "shoe_size", "shoe_width", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dominique Brisco"], ["username", "dbrisco93"], ["password", "1234"], ["shoe_size", 9], ["shoe_width", "C"], ["created_at", "2020-12-02 17:59:14.013367"], ["updated_at", "2020-12-02 17:59:14.013367"]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users" for ::1 at 2020-12-02 13:13:34 -0600
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 2.0ms | Allocations: 9915)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Ariel Grubbs":String):
+  
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/users" for ::1 at 2020-12-02 13:17:36 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 0.0ms | Allocations: 72432)
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x00007fb3210a0808>
+Did you mean?  users):
+  
+app/controllers/users_controller.rb:5:in `index'
+Started GET "/users" for ::1 at 2020-12-02 13:17:47 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 8412)
+
+
+Started GET "/users" for ::1 at 2020-12-02 13:17:58 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 7980)
+
+
+Started GET "/users" for ::1 at 2020-12-02 13:18:13 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.9ms | Allocations: 9194)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Ariel Grubbs":String):
+  
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/users" for ::1 at 2020-12-02 13:26:59 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms | Allocations: 8803)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Ariel Grubbs":String):
+  
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/users" for ::1 at 2020-12-02 13:28:05 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.3ms | Allocations: 9220)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "ArielVG":String):
+  
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/users" for ::1 at 2020-12-02 13:28:16 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.3ms | Allocations: 9002)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for 10:Integer):
+  
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/users" for ::1 at 2020-12-02 13:29:24 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.3ms | Allocations: 9188)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Ariel Grubbs":String):
+  
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/users" for ::1 at 2020-12-02 13:30:31 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 3.4ms | Allocations: 7960)
+
+
+Started GET "/users" for ::1 at 2020-12-02 13:32:09 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 2.6ms | Allocations: 8296)
+
+
+Started GET "/users" for ::1 at 2020-12-02 13:45:07 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 7944)
+
+
+Started GET "/shoes" for ::1 at 2020-12-02 13:45:10 -0600
+Processing by ShoesController#index as HTML
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 4210)
+
+
+Started GET "/shoes" for ::1 at 2020-12-02 13:45:14 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoesController#index as HTML
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 3462)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (15.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShoes (20201202171907)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "shoes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "brand" varchar, "image_url" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202171907"]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShoppingCarts (20201202172039)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "shopping_carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_8228391db2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_shopping_carts_on_user_id" ON "shopping_carts" ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172039"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShoppingCartShoes (20201202172132)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "shopping_cart_shoes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "shopping_cart_id" integer NOT NULL, "shoe_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_2cec627373"
+FOREIGN KEY ("shopping_cart_id")
+  REFERENCES "shopping_carts" ("id")
+, CONSTRAINT "fk_rails_e91ddd2d97"
+FOREIGN KEY ("shoe_id")
+  REFERENCES "shoes" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_cart_shoes_on_shopping_cart_id" ON "shopping_cart_shoes" ("shopping_cart_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_cart_shoes_on_shoe_id" ON "shopping_cart_shoes" ("shoe_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172132"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateComments (20201202172233)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "shoe_id" integer NOT NULL, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_709ed0d446"
+FOREIGN KEY ("shoe_id")
+  REFERENCES "shoes" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_shoe_id" ON "comments" ("shoe_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172233"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20201202172832)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "username" varchar, "password" varchar, "shoe_size" integer, "shoe_width" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172832"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-02 19:45:44.369650"], ["updated_at", "2020-12-02 19:45:44.369650"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "shoe_size", "shoe_width", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ariel Grubbs"], ["username", "ArielVG"], ["password", "1234"], ["shoe_size", 10], ["shoe_width", "C"], ["created_at", "2020-12-02 19:45:48.090977"], ["updated_at", "2020-12-02 19:45:48.090977"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "shoe_size", "shoe_width", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dominique Brisco"], ["username", "dbrisco93"], ["password", "1234"], ["shoe_size", 9], ["shoe_width", "C"], ["created_at", "2020-12-02 19:45:48.101380"], ["updated_at", "2020-12-02 19:45:48.101380"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShoe Create (0.9ms)[0m  [1m[32mINSERT INTO "shoes" ("name", "brand", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "whirlwind"], ["brand", "Adidas"], ["image_url", "data:image/jpeg;base64,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"], ["created_at", "2020-12-02 19:45:48.118993"], ["updated_at", "2020-12-02 19:45:48.118993"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShoppingCart Create (0.9ms)[0m  [1m[32mINSERT INTO "shopping_carts" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 1], ["created_at", "2020-12-02 19:45:48.219369"], ["updated_at", "2020-12-02 19:45:48.219369"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShoppingCartShoe Create (0.9ms)[0m  [1m[32mINSERT INTO "shopping_cart_shoes" ("shopping_cart_id", "shoe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["shopping_cart_id", 1], ["shoe_id", 1], ["created_at", "2020-12-02 19:45:48.248225"], ["updated_at", "2020-12-02 19:45:48.248225"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Create (1.1ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "shoe_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["shoe_id", 1], ["content", "I like this shoe!"], ["created_at", "2020-12-02 19:45:48.279027"], ["updated_at", "2020-12-02 19:45:48.279027"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/shoes" for ::1 at 2020-12-02 13:45:53 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShoesController#index as HTML
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 8022)
+
+
+Started GET "/users" for ::1 at 2020-12-02 13:46:00 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 8144)
+
+
+Started GET "/shopping_carts" for ::1 at 2020-12-02 13:46:09 -0600
+Processing by ShoppingCartsController#index as HTML
+  [1m[36mShoppingCart Load (0.6ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts"[0m
+  ↳ app/controllers/shopping_carts_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 5152)
+
+
+Started GET "/shopping_cart_shoes" for ::1 at 2020-12-02 13:46:19 -0600
+Processing by ShoppingCartShoesController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1646)
+
+
+  
+NameError (uninitialized constant ShoppingCartShoesController::ShoppingCartShoes):
+  
+app/controllers/shopping_cart_shoes_controller.rb:3:in `index'
+Started GET "/shopping_cart_shoes" for ::1 at 2020-12-02 13:46:32 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoppingCartShoesController#index as HTML
+  [1m[36mShoppingCartShoe Load (0.2ms)[0m  [1m[34mSELECT "shopping_cart_shoes".* FROM "shopping_cart_shoes"[0m
+  ↳ app/controllers/shopping_cart_shoes_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 5287)
+
+
+Started GET "/shopping_carts" for ::1 at 2020-12-02 13:46:38 -0600
+Processing by ShoppingCartsController#index as HTML
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts"[0m
+  ↳ app/controllers/shopping_carts_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 4800)
+
+
+Started GET "/shopping_cart_shoes" for ::1 at 2020-12-02 13:46:53 -0600
+Processing by ShoppingCartShoesController#index as HTML
+  [1m[36mShoppingCartShoe Load (0.4ms)[0m  [1m[34mSELECT "shopping_cart_shoes".* FROM "shopping_cart_shoes"[0m
+  ↳ app/controllers/shopping_cart_shoes_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 771)
+
+
+Started GET "/comments" for ::1 at 2020-12-02 13:47:29 -0600
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 5411)
+
+
+Started GET "/users" for ::1 at 2020-12-02 13:47:35 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 7979)
+
+
+Started GET "/users" for ::1 at 2020-12-02 13:47:47 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 8294)
+
+
+Started GET "/users" for ::1 at 2020-12-02 13:47:50 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 997)
+
+
+Started GET "/users" for ::1 at 2020-12-02 13:47:54 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 997)
+
+
+Started GET "/users" for ::1 at 2020-12-02 13:48:04 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ (byebug):1:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 131621ms (ActiveRecord: 3.3ms | Allocations: 85971)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/users_controller.rb:5:in `index'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users" for ::1 at 2020-12-02 13:50:38 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 9067)
+
+
+Started GET "/users" for ::1 at 2020-12-02 13:54:18 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 40ms (Views: 0.1ms | ActiveRecord: 3.0ms | Allocations: 16994)
+
+
+Started GET "/users" for ::1 at 2020-12-02 13:56:41 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 4.0ms | Allocations: 14573)
+
+
+Started GET "/users/1" for ::1 at 2020-12-02 13:56:43 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 928)
+
+
+Started GET "/users/1" for ::1 at 2020-12-02 13:59:17 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 8165)
+
+
+Started GET "/comments/1" for ::1 at 2020-12-02 13:59:23 -0600
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:8:in `show'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 5439)
+
+
+Started GET "/shopping_carts/1" for ::1 at 2020-12-02 13:59:33 -0600
+Processing by ShoppingCartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_carts_controller.rb:8:in `show'
+Completed 200 OK in 22ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 4933)
+
+
+Started GET "/shopping_cart_shoes/1" for ::1 at 2020-12-02 13:59:42 -0600
+Processing by ShoppingCartShoesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShoppingCartShoe Load (0.2ms)[0m  [1m[34mSELECT "shopping_cart_shoes".* FROM "shopping_cart_shoes" WHERE "shopping_cart_shoes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_cart_shoes_controller.rb:8:in `show'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 4805)
+
+
+Started GET "/shoes/1" for ::1 at 2020-12-02 13:59:52 -0600
+Processing by ShoesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes" WHERE "shoes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shoes_controller.rb:8:in `show'
+Completed 200 OK in 14ms (Views: 0.9ms | ActiveRecord: 1.3ms | Allocations: 7076)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:00:08 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2652)
+
+
+Started GET "/users/1" for ::1 at 2020-12-02 14:00:12 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 761)
+
+
+Started GET "/users/1" for ::1 at 2020-12-02 14:04:31 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 32ms (Views: 11.3ms | ActiveRecord: 4.4ms | Allocations: 13984)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:05:59 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 26ms (Views: 0.1ms | ActiveRecord: 2.9ms | Allocations: 14517)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:06:19 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 40ms (Views: 0.1ms | ActiveRecord: 4.0ms | Allocations: 14518)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:07:01 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 31ms (Views: 0.3ms | ActiveRecord: 3.5ms | Allocations: 14405)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:07:19 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 34ms (Views: 0.4ms | ActiveRecord: 3.6ms | Allocations: 14465)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:07:54 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 31ms (Views: 0.4ms | ActiveRecord: 3.6ms | Allocations: 14421)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:07:56 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 17ms (Views: 8.1ms | ActiveRecord: 0.8ms | Allocations: 2298)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:08:05 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 41ms (Views: 0.3ms | ActiveRecord: 3.4ms | Allocations: 14381)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:08:15 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 32ms (Views: 0.5ms | ActiveRecord: 3.5ms | Allocations: 14465)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:09:13 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 37ms (Views: 0.4ms | ActiveRecord: 3.7ms | Allocations: 14465)
+
+
+Started GET "/comments" for ::1 at 2020-12-02 14:09:17 -0600
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 823)
+
+
+Started GET "/comments" for ::1 at 2020-12-02 14:09:34 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/mnt/c/Users/ariel/dev/flatiron/labs/Phase 3/phase3project/GTFS-backend-api/app/controllers/comments_controller.rb:4: syntax error, unexpected ':', expecting ']'
+...er json: comments, only: [:id :content, :user, :shoe]
+...                              ^
+/mnt/c/Users/ariel/dev/flatiron/labs/Phase 3/phase3project/GTFS-backend-api/app/controllers/comments_controller.rb:4: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...ts, only: [:id :content, :user, :shoe]
+...                              ^
+/mnt/c/Users/ariel/dev/flatiron/labs/Phase 3/phase3project/GTFS-backend-api/app/controllers/comments_controller.rb:11: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/comments_controller.rb:4: syntax error, unexpected ':', expecting ']'
+app/controllers/comments_controller.rb:4: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/comments_controller.rb:11: syntax error, unexpected end-of-input, expecting end
+app/controllers/comments_controller.rb:4: syntax error, unexpected ':', expecting ']'
+app/controllers/comments_controller.rb:4: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/comments_controller.rb:11: syntax error, unexpected end-of-input, expecting end
+Started GET "/comments" for ::1 at 2020-12-02 14:09:51 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/mnt/c/Users/ariel/dev/flatiron/labs/Phase 3/phase3project/GTFS-backend-api/app/controllers/comments_controller.rb:4: syntax error, unexpected ':', expecting ']'
+...er json: comments, only: [:id :content, :user, :shoe]
+...                              ^
+/mnt/c/Users/ariel/dev/flatiron/labs/Phase 3/phase3project/GTFS-backend-api/app/controllers/comments_controller.rb:4: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...ts, only: [:id :content, :user, :shoe]
+...                              ^
+/mnt/c/Users/ariel/dev/flatiron/labs/Phase 3/phase3project/GTFS-backend-api/app/controllers/comments_controller.rb:11: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/comments_controller.rb:4: syntax error, unexpected ':', expecting ']'
+app/controllers/comments_controller.rb:4: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/comments_controller.rb:11: syntax error, unexpected end-of-input, expecting end
+app/controllers/comments_controller.rb:4: syntax error, unexpected ':', expecting ']'
+app/controllers/comments_controller.rb:4: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/comments_controller.rb:11: syntax error, unexpected end-of-input, expecting end
+Started GET "/comments" for ::1 at 2020-12-02 14:10:05 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/mnt/c/Users/ariel/dev/flatiron/labs/Phase 3/phase3project/GTFS-backend-api/app/controllers/comments_controller.rb:4: syntax error, unexpected ':', expecting ']'
+... comments.to_json, only: [:id :content, :user, :shoe]
+...                              ^
+/mnt/c/Users/ariel/dev/flatiron/labs/Phase 3/phase3project/GTFS-backend-api/app/controllers/comments_controller.rb:4: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...on, only: [:id :content, :user, :shoe]
+...                              ^
+/mnt/c/Users/ariel/dev/flatiron/labs/Phase 3/phase3project/GTFS-backend-api/app/controllers/comments_controller.rb:11: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/comments_controller.rb:4: syntax error, unexpected ':', expecting ']'
+app/controllers/comments_controller.rb:4: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/comments_controller.rb:11: syntax error, unexpected end-of-input, expecting end
+app/controllers/comments_controller.rb:4: syntax error, unexpected ':', expecting ']'
+app/controllers/comments_controller.rb:4: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/comments_controller.rb:11: syntax error, unexpected end-of-input, expecting end
+Started GET "/comments" for ::1 at 2020-12-02 14:10:16 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 5867)
+
+
+Started GET "/comments" for ::1 at 2020-12-02 14:10:24 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 1.3ms | Allocations: 5791)
+
+
+Started GET "/comments" for ::1 at 2020-12-02 14:10:41 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 1.4ms | Allocations: 5799)
+
+
+Started GET "/comments" for ::1 at 2020-12-02 14:10:49 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 1.6ms | Allocations: 5849)
+
+
+Started GET "/comments" for ::1 at 2020-12-02 14:11:03 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 1.3ms | Allocations: 5815)
+
+
+Started GET "/shoes" for ::1 at 2020-12-02 14:11:59 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoesController#index as HTML
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 6.5ms | ActiveRecord: 1.6ms | Allocations: 7457)
+
+
+Started GET "/shopping_carts" for ::1 at 2020-12-02 14:12:20 -0600
+Processing by ShoppingCartsController#index as HTML
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts"[0m
+  ↳ app/controllers/shopping_carts_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 4807)
+
+
+Started GET "/shopping_carts" for ::1 at 2020-12-02 14:12:32 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoppingCartsController#index as HTML
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts"[0m
+  ↳ app/controllers/shopping_carts_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 5164)
+
+
+Started GET "/shopping_carts" for ::1 at 2020-12-02 14:12:44 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoppingCartsController#index as HTML
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts"[0m
+  ↳ app/controllers/shopping_carts_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 15.4ms | ActiveRecord: 2.1ms | Allocations: 5225)
+
+
+Started GET "/shopping_carts" for ::1 at 2020-12-02 14:12:51 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoppingCartsController#index as HTML
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts"[0m
+  ↳ app/controllers/shopping_carts_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 1.2ms | Allocations: 5269)
+
+
+Started GET "/shopping_carts" for ::1 at 2020-12-02 14:12:57 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoppingCartsController#index as HTML
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts"[0m
+  ↳ app/controllers/shopping_carts_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 10.0ms | ActiveRecord: 2.0ms | Allocations: 5236)
+
+
+Started GET "/shopping_cart_shoes" for ::1 at 2020-12-02 14:13:06 -0600
+Processing by ShoppingCartShoesController#index as HTML
+  [1m[36mShoppingCartShoe Load (0.4ms)[0m  [1m[34mSELECT "shopping_cart_shoes".* FROM "shopping_cart_shoes"[0m
+  ↳ app/controllers/shopping_cart_shoes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 1.2ms | Allocations: 4788)
+
+
+Started GET "/shopping_cart_shoes" for ::1 at 2020-12-02 14:13:25 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoppingCartShoesController#index as HTML
+  [1m[36mShoppingCartShoe Load (0.8ms)[0m  [1m[34mSELECT "shopping_cart_shoes".* FROM "shopping_cart_shoes"[0m
+  ↳ app/controllers/shopping_cart_shoes_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 12.4ms | ActiveRecord: 2.1ms | Allocations: 5180)
+
+
+Started GET "/shoes/1" for ::1 at 2020-12-02 14:13:46 -0600
+Processing by ShoesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes" WHERE "shoes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shoes_controller.rb:8:in `show'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 6961)
+
+
+Started GET "/shopping_cart_shoes" for ::1 at 2020-12-02 14:14:23 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoppingCartShoesController#index as HTML
+  [1m[36mShoppingCartShoe Load (0.3ms)[0m  [1m[34mSELECT "shopping_cart_shoes".* FROM "shopping_cart_shoes"[0m
+  ↳ app/controllers/shopping_cart_shoes_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 1.5ms | Allocations: 5180)
+
+
+Started GET "/shopping_cart_shoes/1" for ::1 at 2020-12-02 14:14:26 -0600
+Processing by ShoppingCartShoesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShoppingCartShoe Load (0.4ms)[0m  [1m[34mSELECT "shopping_cart_shoes".* FROM "shopping_cart_shoes" WHERE "shopping_cart_shoes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_cart_shoes_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 767)
+
+
+Started GET "/shopping_cart_shoes/1" for ::1 at 2020-12-02 14:15:38 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoppingCartShoesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShoppingCartShoe Load (0.2ms)[0m  [1m[34mSELECT "shopping_cart_shoes".* FROM "shopping_cart_shoes" WHERE "shopping_cart_shoes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_cart_shoes_controller.rb:8:in `show'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 5039)
+
+
+Started GET "/shopping_cart_shoes" for ::1 at 2020-12-02 14:15:41 -0600
+Processing by ShoppingCartShoesController#index as HTML
+  [1m[36mShoppingCartShoe Load (0.3ms)[0m  [1m[34mSELECT "shopping_cart_shoes".* FROM "shopping_cart_shoes"[0m
+  ↳ app/controllers/shopping_cart_shoes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 896)
+
+
+Started GET "/shopping_carts" for ::1 at 2020-12-02 14:15:45 -0600
+Processing by ShoppingCartsController#index as HTML
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts"[0m
+  ↳ app/controllers/shopping_carts_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 1.0ms | Allocations: 4905)
+
+
+Started GET "/shopping_carts/1" for ::1 at 2020-12-02 14:15:49 -0600
+Processing by ShoppingCartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_carts_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 753)
+
+
+Started GET "/shoes" for ::1 at 2020-12-02 14:15:54 -0600
+Processing by ShoesController#index as HTML
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 6.6ms | ActiveRecord: 1.1ms | Allocations: 7070)
+
+
+Started GET "/comments" for ::1 at 2020-12-02 14:15:59 -0600
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 1.8ms | Allocations: 5482)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:16:03 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 29ms (Views: 0.4ms | ActiveRecord: 2.5ms | Allocations: 9511)
+
+
+Started GET "/users/1" for ::1 at 2020-12-02 14:16:06 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 1870)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:16:27 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 1.0ms | Allocations: 2283)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:23:48 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 37ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 13773)
+
+
+Started GET "/users/1" for ::1 at 2020-12-02 14:23:52 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.6ms | Allocations: 1873)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:24:30 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `puts'
+Completed 200 OK in 31ms (Views: 0.6ms | ActiveRecord: 2.8ms | Allocations: 14581)
+
+
+Started GET "/shopping_carts" for ::1 at 2020-12-02 14:25:53 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoppingCartsController#index as HTML
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts"[0m
+  ↳ app/controllers/shopping_carts_controller.rb:4:in `index'
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes" INNER JOIN "shopping_cart_shoes" ON "shoes"."id" = "shopping_cart_shoes"."shoe_id" WHERE "shopping_cart_shoes"."shopping_cart_id" = ?[0m  [["shopping_cart_id", 1]]
+  ↳ app/controllers/shopping_carts_controller.rb:4:in `index'
+Completed 200 OK in 74ms (Views: 67.8ms | ActiveRecord: 2.9ms | Allocations: 16626)
+
+
+Started GET "/shopping_carts" for ::1 at 2020-12-02 14:26:31 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoppingCartsController#index as HTML
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts"[0m
+  ↳ app/controllers/shopping_carts_controller.rb:4:in `index'
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes" INNER JOIN "shopping_cart_shoes" ON "shoes"."id" = "shopping_cart_shoes"."shoe_id" WHERE "shopping_cart_shoes"."shopping_cart_id" = ?[0m  [["shopping_cart_id", 1]]
+  ↳ app/controllers/shopping_carts_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 25.8ms | ActiveRecord: 3.3ms | Allocations: 14094)
+
+
+Started GET "/shoes" for ::1 at 2020-12-02 14:26:34 -0600
+Processing by ShoesController#index as HTML
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.7ms | Allocations: 2644)
+
+
+Started GET "/comments" for ::1 at 2020-12-02 14:28:02 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:4:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `index'
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes" WHERE "shoes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `index'
+Completed 200 OK in 44ms (Views: 37.5ms | ActiveRecord: 4.0ms | Allocations: 21540)
+
+
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+Started GET "/users" for ::1 at 2020-12-02 14:56:42 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/rails/actions" for ::1 at 2020-12-02 14:57:00 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShoes (20201202171907)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "shoes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "brand" varchar, "image_url" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202171907"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShoppingCarts (20201202172039)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "shopping_carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_8228391db2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_carts_on_user_id" ON "shopping_carts" ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172039"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShoppingCartShoes (20201202172132)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "shopping_cart_shoes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "shopping_cart_id" integer NOT NULL, "shoe_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_2cec627373"
+FOREIGN KEY ("shopping_cart_id")
+  REFERENCES "shopping_carts" ("id")
+, CONSTRAINT "fk_rails_e91ddd2d97"
+FOREIGN KEY ("shoe_id")
+  REFERENCES "shoes" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_cart_shoes_on_shopping_cart_id" ON "shopping_cart_shoes" ("shopping_cart_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_cart_shoes_on_shoe_id" ON "shopping_cart_shoes" ("shoe_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172132"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateComments (20201202172233)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "shoe_id" integer NOT NULL, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_709ed0d446"
+FOREIGN KEY ("shoe_id")
+  REFERENCES "shoes" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_shoe_id" ON "comments" ("shoe_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172233"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20201202172832)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "username" varchar, "password" varchar, "shoe_size" integer, "shoe_width" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172832"]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-02 20:57:00.319817"], ["updated_at", "2020-12-02 20:57:00.319817"]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users" for ::1 at 2020-12-02 14:57:00 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 3383)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:57:05 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 641)
+
+
+Started GET "/users/1" for ::1 at 2020-12-02 14:57:18 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 3403)
+
+
+Started GET "/users/1" for ::1 at 2020-12-02 14:57:49 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 3160)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (9.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "shoe_size", "shoe_width", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ariel Grubbs"], ["username", "ArielVG"], ["password", "1234"], ["shoe_size", 10], ["shoe_width", "C"], ["created_at", "2020-12-02 20:58:16.569106"], ["updated_at", "2020-12-02 20:58:16.569106"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "shoe_size", "shoe_width", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dominique Brisco"], ["username", "dbrisco93"], ["password", "1234"], ["shoe_size", 9], ["shoe_width", "C"], ["created_at", "2020-12-02 20:58:16.587878"], ["updated_at", "2020-12-02 20:58:16.587878"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShoe Create (1.0ms)[0m  [1m[32mINSERT INTO "shoes" ("name", "brand", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "whirlwind"], ["brand", "Adidas"], ["image_url", "data:image/jpeg;base64,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"], ["created_at", "2020-12-02 20:58:16.606578"], ["updated_at", "2020-12-02 20:58:16.606578"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShoppingCart Create (0.9ms)[0m  [1m[32mINSERT INTO "shopping_carts" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 1], ["created_at", "2020-12-02 20:58:16.625264"], ["updated_at", "2020-12-02 20:58:16.625264"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShoppingCartShoe Create (1.1ms)[0m  [1m[32mINSERT INTO "shopping_cart_shoes" ("shopping_cart_id", "shoe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["shopping_cart_id", 1], ["shoe_id", 1], ["created_at", "2020-12-02 20:58:16.642684"], ["updated_at", "2020-12-02 20:58:16.642684"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "shoe_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["shoe_id", 1], ["content", "I like this shoe!"], ["created_at", "2020-12-02 20:58:16.660248"], ["updated_at", "2020-12-02 20:58:16.660248"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users/1" for ::1 at 2020-12-02 14:58:42 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 32ms (Views: 10.5ms | ActiveRecord: 2.7ms | Allocations: 17269)
+
+
+Started GET "/users" for ::1 at 2020-12-02 14:58:47 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 2499)
+
+
+Started GET "/users" for ::1 at 2020-12-02 15:45:49 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NameError (undefined local variable or method `protect_from_forgery' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users" for ::1 at 2020-12-02 15:46:02 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 38ms (Views: 1.0ms | ActiveRecord: 2.9ms | Allocations: 14750)
+
+
+Started GET "/users/1" for ::1 at 2020-12-02 15:46:07 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 1892)
+
+
