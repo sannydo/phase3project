@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('http://localhost:3000/users')
+    fetch('http://localhost:3000/shoes')
     .then(resource => resource.json())
     .then((data) => {
         // addPictureToPage(data)
@@ -10,16 +10,50 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function addTilesToPage(tiles){
-    const shoeTileParent = document.querySelector(".shoe-tiles")
-    tiles.forEach(renderTile())
-
-    function renderTile(tileData){
+    const shoeTileParent = document.querySelector(".posts")
+    // console.log(tiles)
+    tiles.forEach(function renderTile(tileData){
+        console.log(tileData)
         const shoeTile = document.createElement('article')
-        const shoeName = document.createElement('p')
+        
+
+        const shoeName = document.createElement('h3')
+        shoeName.innerText = `${tileData.name}`
+
         const shoePrice = document.createElement('p')
-    }
+        shoePrice.innerText = `${tileData.price}`
+        const addToCartButton = document.createElement('button')
+        addToCartButton.innerText = "Add To Cart"
+        addToCartButton.addEventListener('click', function(event){
+            console.log(event.target)
+        })
+
+        const shoeImage = document.createElement('img')
+        shoeImage.src = `${tileData.image_url}`
+
+        shoeName.addEventListener('click', function(event){
+            console.log(event.target)
+            if (event.target != addToCartButton){
+                //Sanny
+                console.log(event.target)
+                clearPage()
+                renderItemPage()//event.target.item
+            }
+        })
+
+        shoeTile.appendChild(shoeImage)
+        shoeTile.appendChild(shoeName)
+        shoeTile.appendChild(shoePrice)
+        shoeTile.appendChild(addToCartButton)
+        // debugger
+        shoeTileParent.appendChild(shoeTile)
+    })
 }
     
+function clearPage(){
+    const main = document.querySelector('.is-preload')
+    removeAllChildNodes(main)
+}
     // function addPictureToPage(data) {
     //     // const imageCard = document.querySelector('.image-card')
     //     const pictureTitle = document.querySelector('.title')
@@ -170,11 +204,11 @@ function addTilesToPage(tiles){
     // }
     
     
-    // function removeAllChildNodes(parent) {
-    //     while (parent.firstChild) {
-    //         parent.removeChild(parent.firstChild);
-    //     }
-    // }
+    function removeAllChildNodes(parent) {
+        while (parent.firstChild) {
+            parent.removeChild(parent.firstChild);
+        }
+    }
     
     // function deleteComment(commentLI){
     //     fetch(`http://localhost:3000/comments/${commentLI.dataset.commentId}`, {

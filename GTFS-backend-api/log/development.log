@@ -1563,3 +1563,637 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 1892)
 
 
+Started GET "/users/1" for ::1 at 2020-12-03 15:08:37 -0600
+  [1m[35m (13.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 333ms (Views: 111.0ms | ActiveRecord: 3.5ms | Allocations: 17420)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-12-03 15:08:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-12-03 15:08:43 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 27ms (Views: 0.8ms | ActiveRecord: 1.2ms | Allocations: 2552)
+
+
+Started GET "/users" for ::1 at 2020-12-03 15:10:39 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 2469)
+
+
+Started GET "/users" for ::1 at 2020-12-03 15:12:41 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 2468)
+
+
+Started GET "/users" for ::1 at 2020-12-03 15:13:09 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 0.7ms | Allocations: 2450)
+
+
+Started GET "/users" for ::1 at 2020-12-03 15:13:20 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 12ms (Views: 0.9ms | ActiveRecord: 0.8ms | Allocations: 2449)
+
+
+Started GET "/users" for ::1 at 2020-12-03 15:16:08 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 15ms (Views: 2.3ms | ActiveRecord: 0.8ms | Allocations: 2468)
+
+
+Started GET "/users" for ::1 at 2020-12-03 15:16:30 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 2450)
+
+
+Started GET "/users" for ::1 at 2020-12-03 15:16:53 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 14ms (Views: 0.9ms | ActiveRecord: 1.1ms | Allocations: 2449)
+
+
+Started GET "/users" for ::1 at 2020-12-03 15:17:07 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 2449)
+
+
+Started GET "/users" for ::1 at 2020-12-03 15:19:05 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 11ms (Views: 0.6ms | ActiveRecord: 1.2ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:19:33 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 150ms (Views: 112.6ms | ActiveRecord: 4.3ms | Allocations: 15253)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:20:02 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.8ms | Allocations: 2179)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (18.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShoes (20201202171907)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "shoes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "brand" varchar, "image_url" varchar, "price" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202171907"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShoppingCarts (20201202172039)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "shopping_carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_8228391db2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_carts_on_user_id" ON "shopping_carts" ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172039"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShoppingCartShoes (20201202172132)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "shopping_cart_shoes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "shopping_cart_id" integer NOT NULL, "shoe_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_2cec627373"
+FOREIGN KEY ("shopping_cart_id")
+  REFERENCES "shopping_carts" ("id")
+, CONSTRAINT "fk_rails_e91ddd2d97"
+FOREIGN KEY ("shoe_id")
+  REFERENCES "shoes" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_shopping_cart_shoes_on_shopping_cart_id" ON "shopping_cart_shoes" ("shopping_cart_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_cart_shoes_on_shoe_id" ON "shopping_cart_shoes" ("shoe_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172132"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateComments (20201202172233)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "shoe_id" integer NOT NULL, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_709ed0d446"
+FOREIGN KEY ("shoe_id")
+  REFERENCES "shoes" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_shoe_id" ON "comments" ("shoe_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172233"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20201202172832)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "username" varchar, "password" varchar, "shoe_size" integer, "shoe_width" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172832"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-03 21:22:17.259583"], ["updated_at", "2020-12-03 21:22:17.259583"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "shoe_size", "shoe_width", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ariel Grubbs"], ["username", "ArielVG"], ["password", "1234"], ["shoe_size", 10], ["shoe_width", "C"], ["created_at", "2020-12-03 21:22:26.600505"], ["updated_at", "2020-12-03 21:22:26.600505"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "shoe_size", "shoe_width", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dominique Brisco"], ["username", "dbrisco93"], ["password", "1234"], ["shoe_size", 9], ["shoe_width", "C"], ["created_at", "2020-12-03 21:22:26.610878"], ["updated_at", "2020-12-03 21:22:26.610878"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShoe Create (1.0ms)[0m  [1m[32mINSERT INTO "shoes" ("name", "brand", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "whirlwind"], ["brand", "Adidas"], ["image_url", "data:image/jpeg;base64,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"], ["created_at", "2020-12-03 21:22:26.631404"], ["updated_at", "2020-12-03 21:22:26.631404"]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShoppingCart Create (1.0ms)[0m  [1m[32mINSERT INTO "shopping_carts" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 1], ["created_at", "2020-12-03 21:22:26.651317"], ["updated_at", "2020-12-03 21:22:26.651317"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShoppingCartShoe Create (1.0ms)[0m  [1m[32mINSERT INTO "shopping_cart_shoes" ("shopping_cart_id", "shoe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["shopping_cart_id", 1], ["shoe_id", 1], ["created_at", "2020-12-03 21:22:26.667660"], ["updated_at", "2020-12-03 21:22:26.667660"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Create (1.1ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "shoe_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["shoe_id", 1], ["content", "I like this shoe!"], ["created_at", "2020-12-03 21:22:26.684347"], ["updated_at", "2020-12-03 21:22:26.684347"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (18.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShoes (20201202171907)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "shoes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "brand" varchar, "image_url" varchar, "price" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202171907"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShoppingCarts (20201202172039)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "shopping_carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_8228391db2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_shopping_carts_on_user_id" ON "shopping_carts" ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172039"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShoppingCartShoes (20201202172132)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "shopping_cart_shoes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "shopping_cart_id" integer NOT NULL, "shoe_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_2cec627373"
+FOREIGN KEY ("shopping_cart_id")
+  REFERENCES "shopping_carts" ("id")
+, CONSTRAINT "fk_rails_e91ddd2d97"
+FOREIGN KEY ("shoe_id")
+  REFERENCES "shoes" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_cart_shoes_on_shopping_cart_id" ON "shopping_cart_shoes" ("shopping_cart_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_cart_shoes_on_shoe_id" ON "shopping_cart_shoes" ("shoe_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172132"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateComments (20201202172233)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "shoe_id" integer NOT NULL, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_709ed0d446"
+FOREIGN KEY ("shoe_id")
+  REFERENCES "shoes" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_shoe_id" ON "comments" ("shoe_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172233"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20201202172832)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "username" varchar, "password" varchar, "shoe_size" integer, "shoe_width" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201202172832"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-03 21:23:02.888621"], ["updated_at", "2020-12-03 21:23:02.888621"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "shoe_size", "shoe_width", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ariel Grubbs"], ["username", "ArielVG"], ["password", "1234"], ["shoe_size", 10], ["shoe_width", "C"], ["created_at", "2020-12-03 21:23:07.396247"], ["updated_at", "2020-12-03 21:23:07.396247"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "shoe_size", "shoe_width", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dominique Brisco"], ["username", "dbrisco93"], ["password", "1234"], ["shoe_size", 9], ["shoe_width", "C"], ["created_at", "2020-12-03 21:23:07.407198"], ["updated_at", "2020-12-03 21:23:07.407198"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShoe Create (1.0ms)[0m  [1m[32mINSERT INTO "shoes" ("name", "brand", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "whirlwind"], ["brand", "Adidas"], ["image_url", "data:image/jpeg;base64,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"], ["price", "$50"], ["created_at", "2020-12-03 21:23:07.426804"], ["updated_at", "2020-12-03 21:23:07.426804"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShoppingCart Create (1.4ms)[0m  [1m[32mINSERT INTO "shopping_carts" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 1], ["created_at", "2020-12-03 21:23:07.448692"], ["updated_at", "2020-12-03 21:23:07.448692"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShoppingCartShoe Create (1.4ms)[0m  [1m[32mINSERT INTO "shopping_cart_shoes" ("shopping_cart_id", "shoe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["shopping_cart_id", 1], ["shoe_id", 1], ["created_at", "2020-12-03 21:23:07.466477"], ["updated_at", "2020-12-03 21:23:07.466477"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Create (1.4ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "shoe_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["shoe_id", 1], ["content", "I like this shoe!"], ["created_at", "2020-12-03 21:23:07.483995"], ["updated_at", "2020-12-03 21:23:07.483995"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/shoes" for ::1 at 2020-12-03 15:23:20 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 78ms (Views: 59.3ms | ActiveRecord: 4.1ms | Allocations: 18785)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:23:43 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.8ms | Allocations: 2212)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:24:09 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.8ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 1.2ms | Allocations: 2212)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:25:18 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.6ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 1.2ms | Allocations: 2212)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:25:46 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.8ms | Allocations: 2197)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:26:04 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.8ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:26:37 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.6ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:27:14 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.9ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (3.1ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 65ms (Views: 60.4ms | ActiveRecord: 4.0ms | Allocations: 2212)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:27:36 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (1.1ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 2.4ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:27:50 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.9ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:28:11 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.1ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (1.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 2.6ms | Allocations: 2197)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:28:45 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.6ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:28:46 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.9ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:28:47 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.8ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (1.6ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 2.4ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:30:17 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.8ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 2.1ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:32:39 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.9ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:32:48 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.9ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:33:14 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.9ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:40:43 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.8ms | Allocations: 2229)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:42:09 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.6ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 2.2ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:42:37 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.8ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:43:32 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.6ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:45:33 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.9ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 1.2ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:46:05 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.8ms | Allocations: 2194)
+
+
+Started GET "/shoes" for ::1 at 2020-12-03 15:46:06 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.6ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 1.0ms | Allocations: 2194)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-03 15:52:46 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ariel/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ariel/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 32.9ms | Allocations: 336)
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 0.0ms | Allocations: 1611)
+
+
+Started GET "/characters" for 127.0.0.1 at 2020-12-03 15:53:01 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/characters" for 127.0.0.1 at 2020-12-03 15:53:10 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/shoes" for ::1 at 2020-12-03 16:17:50 -0600
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 52ms (Views: 42.6ms | ActiveRecord: 4.4ms | Allocations: 18790)
+
+
