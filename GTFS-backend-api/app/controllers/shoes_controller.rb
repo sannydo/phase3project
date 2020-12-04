@@ -1,7 +1,7 @@
 class ShoesController < ApplicationController
     def index
         shoes = Shoe.all
-        render json: shoes, except: [:created_at, :updated_at], include: [:shopping_carts]
+        render json: shoes, except: [:created_at, :updated_at], include: [:shopping_carts, :comments]
     end
 
     def show

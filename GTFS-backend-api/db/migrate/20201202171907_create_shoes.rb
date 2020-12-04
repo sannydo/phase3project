@@ -5,6 +5,8 @@ class CreateShoes < ActiveRecord::Migration[6.0]
       t.string :brand
       t.string :image_url
       t.string :price
+      t.text :description
+      t.integer :stock
 
       t.timestamps
     end
