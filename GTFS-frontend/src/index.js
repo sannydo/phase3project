@@ -2,16 +2,135 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch('http://localhost:3000/shoes')
     .then(resource => resource.json())
     .then((data) => {
-        // addPictureToPage(data)
-        // renderComments(data)
-        // console.log(data)
-        addTilesToPage(data)
+
+        renderLoginScreen()
+
+        // addTilesToPage(data)
+        // renderDealOfTheDay(data)
+        renderHeader()
     })
 });
 
+function renderLoginScreen(){
+    clearPage()
+    const banner = document.querySelector('#banner')
+    // debugger
+    const innerDiv = banner.parentElement
+    const loginText = document.createElement('h1')
+    loginText.innerText = "Login"
+    loginText.className = "login-text"
+    // loginText.style.display = "block"
+    // loginText.style.margin = "auto"
+
+    const lineBreak = document.createElement('br')
+    const lineBreak2 = document.createElement('br')
+    const lineBreak3 = document.createElement('br')
+
+    const loginFormDiv = document.createElement('div')
+    loginFormDiv.style.display = "block"
+
+    const loginForm = document.querySelector('form')
+    loginForm.method = "post"
+    const defaultField = loginForm.querySelector('#query')
+    loginForm.removeChild(defaultField)
+
+    const usernameInputDiv = document.createElement('div')
+    usernameInputDiv.className = "col-6 col-12-xsmall"
+    usernameInputDiv.style.margin = "0 40em 0 0"
+
+    const usernameInput = document.createElement('input')
+    usernameInput.id = "username-input"
+    usernameInput.type = "text"
+    usernameInput.name = "username-input"
+    usernameInput.placeholder = "Username"
+
+    const passwordInputDiv = document.createElement('div')
+    passwordInputDiv.className = "col-6 col-12-xsmall"
+    passwordInputDiv.style.margin = "0 40em 0 0"
+
+    const passwordInput = document.createElement('input')
+    passwordInput.id = "pasword-input"
+    passwordInput.type = "password"
+    passwordInput.name = "password-input"
+    passwordInput.placeholder = "Password"
+
+    const actionsDiv = document.createElement('div')
+    actionsDiv.className = "col-12"
+    // const actionsUl = document.createElement('ul')
+
+    // const actionLi1 = document.createElement('li')
+    const submitButton = document.createElement('input')
+    submitButton.type = "submit"
+    submitButton.value = "Login"
+    submitButton.className = "primary"
+
+    // const actionLi2 = document.createElement('li')
+    const signUpButton = document.createElement('button')
+    signUpButton.innerText = "Sign Up"
+    signUpButton.style.marginLeft = "1em"
+
+    loginForm.appendChild(usernameInputDiv)
+    usernameInputDiv.appendChild(usernameInput)
+    loginForm.appendChild(lineBreak2)
+    loginForm.appendChild(passwordInputDiv)
+    passwordInputDiv.appendChild(passwordInput)
+
+    // actionLi1.appendChild(submitButton)
+    // actionLi2.appendChild(signUpButton)
+    // actionsUl.appendChild(actionLi1)
+    // actionsUl.appendChild(actionLi2)
+
+    actionsDiv.appendChild(submitButton)
+    actionsDiv.appendChild(signUpButton)
+    loginForm.appendChild(lineBreak3)
+    loginForm.appendChild(actionsDiv)
+
+    innerDiv.appendChild(loginText)
+    innerDiv.appendChild(lineBreak)
+    innerDiv.appendChild(loginFormDiv)
+    loginFormDiv.appendChild(loginForm)
+    // debugger
+
+    submitButton.addEventListener('click', function(event){
+        event.preventDefault()
+        // usernameInput.value
+        // passwordInput.value
+        fetch('http://localhost:3000/users')
+        .then(resource => resource.json())
+        .then((data) => {
+            data.forEach(function(user){
+                if (user.username === usernameInput.value && user.password === passwordInput.value){
+                    fetch('http://localhost:3000/shoes')
+                    .then(resource => resource.json())
+                    .then((data) => {
+
+                        // renderLoginScreen()
+
+                        addTilesToPage(data)
+                        renderDealOfTheDay(data)
+                        // renderHeader()
+                    })
+                } else {
+                    //add incorrect password or username message element
+                }
+            })
+        })
+    })
+}
+
+function renderDealOfTheDay(tiles){
+    tiles.forEach(function(tileData){
+        let highestStock = 5000
+        if (tileData.stock == highestStock){
+            highestStock = tileData.stock
+            renderDealOfTheDayItem(tileData)
+        }
+    })
+}
+
 function addTilesToPage(tiles){
     const shoeTileParent = document.querySelector(".posts")
-    // console.log(tiles)
+    console.log(tiles)
     tiles.forEach(function renderTile(tileData){
         console.log(tileData)
         const shoeTile = document.createElement('article')
@@ -28,23 +147,41 @@ function addTilesToPage(tiles){
         })
 
         const shoeImage = document.createElement('img')
+        shoeImage.class = "tile-image"
         shoeImage.src = `${tileData.image_url}`
 
         shoeName.addEventListener('click', function(event){
                 //Sanny
             console.log(event.target)
-            clearPage()
+            clearItemList()
             renderItemPage(tileData)//event.target.item
         })
 
         shoeTile.appendChild(shoeImage)
         shoeTile.appendChild(shoeName)
         shoeTile.appendChild(shoePrice)
+        debugger
         shoeTile.appendChild(addToCartButton)
         // debugger
         shoeTileParent.appendChild(shoeTile)
     })
 }
+
+function renderHeader(){
+    const pageHeader = document.querySelector('#header')
+    let yourCartButton = pageHeader.querySelector('button')
+    yourCartButton.addEventListener('click', function(event){
+        clearPage()
+        renderCart()
+        debugger
+    })
+}
+
+function renderCart(){
+
+}
+
+
 
 function renderItemPage(tileData){
     const banner = document.querySelector('#banner')
@@ -52,50 +189,80 @@ function renderItemPage(tileData){
     let content = banner.querySelector('.content')
     // console.log(content)
     let header = content.querySelector('header')
-    
+
     let itemTitle = header.querySelector('h1')
     itemTitle.innerText = tileData.name
 
-    let itemPrice = header.querySelector('p')
+    let secondaryItemTitle = header.querySelector('h2')
+    secondaryItemTitle.innerHTML = null
+
+    let itemPrice = content.querySelector('h3')
     itemPrice.innerText = `${tileData.price}`
 
     let itemDescription = content.querySelector('#item-description')
-    itemDescription.innerText = `placeholder item description`
+    itemDescription.innerText = `${tileData.description}`
 
     let buttonParentUl = content.querySelector('ul')
 
     let addToCartButton = buttonParentUl.querySelector('a')
     addToCartButton.innerText = "Add To Cart"
 
-    // const shoeTile = document.createElement('article')
-        
-    // const shoeName = document.createElement('h3')
-    // shoeName.innerText = `${tileData.name}`
+    let itemStockDisplay = content.querySelector('#item-stock-display')
+    itemStockDisplay.innerText = `Remaining Stock: ${tileData.stock}`
 
-    // const shoePrice = document.createElement('p')
-    // shoePrice.innerText = `${tileData.price}`
-    // const addToCartButton = document.createElement('button')
-    // addToCartButton.innerText = "Add To Cart"
-    // addToCartButton.addEventListener('click', function(event){
-    //     console.log(event.target)
-    // })
+    let imageObject = banner.querySelector('span')
+    let itemImage = imageObject.firstElementChild
+    itemImage.src = tileData.image_url
+}
 
-    // const shoeImage = document.createElement('img')
-    // shoeImage.src = `${tileData.image_url}`
-    // shoeTile.appendChild(shoeImage)
-    // shoeTile.appendChild(shoeName)
-    // shoeTile.appendChild(shoePrice)
-    // shoeTile.appendChild(addToCartButton)
-    // // debugger
-    // shoeTileParent.appendChild(shoeTile)
+function renderDealOfTheDayItem(tileData){
+    const banner = document.querySelector('#banner')
+    console.log(banner)
+    let content = banner.querySelector('.content')
+    // console.log(content)
+    let header = content.querySelector('header')
+
+    let itemTitle = header.querySelector('h2')
+    itemTitle.innerText = tileData.name
+
+    let itemPrice = content.querySelector('h3')
+    itemPrice.innerText = `${tileData.price}`
+
+    let itemDescription = content.querySelector('#item-description')
+    itemDescription.innerText = `${tileData.description}`
+
+    let buttonParentUl = content.querySelector('ul')
+
+    let addToCartButton = buttonParentUl.querySelector('a')
+    addToCartButton.innerText = "Add To Cart"
+
+    let itemStockDisplay = content.querySelector('#item-stock-display')
+    itemStockDisplay.innerText = `Remaining Stock: ${tileData.stock}`
+
+    header.addEventListener('click', function(event){
+        clearItemList()
+        renderItemPage(tileData)
+    })
+    
+    let imageObject = banner.querySelector('span')
+    let itemImage = imageObject.firstElementChild
+    itemImage.src = tileData.image_url
+    // debugger
 }
     
-function clearPage(){
+function clearItemList(){
     console.log("You made it")
     
     // removeAllChildNodes(banner)
     const productList = document.querySelector('#product-list')
     removeAllChildNodes(productList)
+}
+
+function clearPage(){
+    const productList = document.querySelector('#product-list')
+    removeAllChildNodes(productList)
+    const banner = document.querySelector('#banner')
+    removeAllChildNodes(banner)
 }
     // function addPictureToPage(data) {
     //     // const imageCard = document.querySelector('.image-card')

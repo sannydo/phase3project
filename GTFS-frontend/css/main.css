@@ -1006,9 +1006,14 @@ header.major > :last-child {
 header.main > :last-child {
   margin: 0 0 1em 0; }
 
+/* Login Text */
+.login-text h1 {
+  margin: auto;
+  display: block;
+}
 /* Form */
 form {
-  margin: 0 0 2em 0; }
+  margin: auto; }
 
 label {
   color: #3d4449;
@@ -2116,6 +2121,9 @@ button,
   display: flex; }
   #banner h1 {
     margin-top: -0.125em; }
+    #banner h1 .login {
+      display: block;
+    }
   #banner .content {
     -moz-flex-grow: 1;
     -webkit-flex-grow: 1;
