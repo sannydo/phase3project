@@ -3,28 +3,50 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(resource => resource.json())
     .then((data) => {
 
-        renderLoginScreen()
+        // renderLoginScreen()
 
-        // addTilesToPage(data)
-        // renderDealOfTheDay(data)
+        addTilesToPage(data)
+        renderDealOfTheDay(data)
+        // renderLoginScreen()
+
         renderHeader()
     })
 });
 
 function renderLoginScreen(){
-    clearPage()
-    const banner = document.querySelector('#banner')
-    // debugger
-    const innerDiv = banner.parentElement
+    // clearPage()
+    toggleShowPage()
+    // hideIncorrectPasswordMessage()
+    // const banner = document.querySelector('#banner')
+    // const innerDiv = banner.parentElement
+    const loginTargetDiv = document.querySelector('#login-target')
+    loginTargetDiv.style.display = "block"
+
     const loginText = document.createElement('h1')
     loginText.innerText = "Login"
     loginText.className = "login-text"
     // loginText.style.display = "block"
     // loginText.style.margin = "auto"
 
+    const spacer = document.createElement('div')
+    spacer.style.marginBottom = "7em"
+    loginTargetDiv.appendChild(spacer)
+
     const lineBreak = document.createElement('br')
     const lineBreak2 = document.createElement('br')
     const lineBreak3 = document.createElement('br')
+    const lineBreak4 = document.createElement('br')
+    // lineBreak4.style.marginBottom = "20px"
+    const lineBreak5 = document.createElement('br')
+    const lineBreak6 = document.createElement('br')
+
+    const errorMessageDiv = document.createElement('div')
+    const errorMessage = document.createElement('p')
+    errorMessage.innerText = "Sorry, it looks like either your Password or your Username are incorrect"
+    errorMessage.style.color = "red"
+    
+    errorMessageDiv.style.display = "none"
+    errorMessageDiv.appendChild(errorMessage)
 
     const loginFormDiv = document.createElement('div')
     loginFormDiv.style.display = "block"
@@ -85,37 +107,231 @@ function renderLoginScreen(){
     loginForm.appendChild(lineBreak3)
     loginForm.appendChild(actionsDiv)
 
-    innerDiv.appendChild(loginText)
-    innerDiv.appendChild(lineBreak)
-    innerDiv.appendChild(loginFormDiv)
+    loginTargetDiv.appendChild(loginText)
+    loginTargetDiv.appendChild(lineBreak)
+    loginTargetDiv.appendChild(errorMessageDiv)
+    loginTargetDiv.appendChild(loginFormDiv)
+    loginTargetDiv.appendChild(lineBreak4)
+    loginTargetDiv.appendChild(lineBreak5)
+    loginTargetDiv.appendChild(lineBreak6)
     loginFormDiv.appendChild(loginForm)
     // debugger
+    function hideIncorrectPasswordMessage(){
+        errorMessageDiv.style.display = "none"
+    }    
 
     submitButton.addEventListener('click', function(event){
         event.preventDefault()
         // usernameInput.value
         // passwordInput.value
         fetch('http://localhost:3000/users')
-        .then(resource => resource.json())
+        .then(response => response.json())
         .then((data) => {
             data.forEach(function(user){
                 if (user.username === usernameInput.value && user.password === passwordInput.value){
-                    fetch('http://localhost:3000/shoes')
-                    .then(resource => resource.json())
-                    .then((data) => {
-
-                        // renderLoginScreen()
-
-                        addTilesToPage(data)
-                        renderDealOfTheDay(data)
-                        // renderHeader()
-                    })
+                    toggleShowPage()
+                    toggleHideLoginScreen()
+                    hideIncorrectPasswordMessage()
                 } else {
-                    //add incorrect password or username message element
+                    //incorrect username or password message
+                    errorMessageDiv.style.display = "block"
                 }
             })
         })
     })
+}
+
+
+function toggleHideLoginScreen(){
+    // debugger
+    const loginTargetDiv = document.querySelector('#login-target')
+    if (loginTargetDiv.style.display === "none") {
+        loginTargetDiv.style.display = "block";
+    } else {
+        loginTargetDiv.style.display = "none";
+    }
+}
+
+function renderSignUpScreen(){
+    // clearPage()
+    toggleShowPage()
+    // const banner = document.querySelector('#banner')
+    // const innerDiv = banner.parentElement
+    const signupTargetDiv = document.querySelector('#login-target')
+
+    const signupText = document.createElement('h1')
+    signupText.innerText = "Sign-Up"
+    signupText.className = "signup-text"
+    // loginText.style.display = "block"
+    // loginText.style.margin = "auto"
+
+    const spacer = document.createElement('div')
+    spacer.style.marginBottom = "7em"
+    loginTargetDiv.appendChild(spacer)
+
+    const lineBreak = document.createElement('br')
+    const lineBreak2 = document.createElement('br')
+    const lineBreak3 = document.createElement('br')
+    const lineBreak4 = document.createElement('br')
+    // lineBreak4.style.marginBottom = "20px"
+    const lineBreak5 = document.createElement('br')
+    const lineBreak6 = document.createElement('br')
+
+    // Errors -- come back
+    // const errorMessageDiv = document.createElement('div')
+    // const errorMessage = document.createElement('p')
+    // errorMessage.innerText = "Sorry, it looks like either your Password or your Username are incorrect"
+    // errorMessage.style.color = "red"
+    // errorMessageDiv.style.display = "none"
+    // errorMessageDiv.appendChild(errorMessage)
+
+    const signupFormDiv = document.createElement('div')
+    signupFormDiv.style.display = "block"
+
+    const signupForm = document.querySelector('form')
+    signupForm.method = "post"
+    const defaultField = signupForm.querySelector('#query')
+    signupForm.removeChild(defaultField)
+    // name 
+    const nameInputDiv = document.createElement('div')
+    nameInputDiv.className = "col-6 col-12-xsmall"
+    nameInputDiv.style.margin = "0 40em 0 0"
+
+    const nameInput = document.createElement('input')
+    nameInput.id = "name-input"
+    nameInput.type = "text"
+    nameInput.name = "name-input"
+    nameInput.placeholder = "Name"
+    // username 
+
+    const newuserNameDiv = document.createElement('div')
+    newuserNameDiv.className = "col-6 col-12-xsmall"
+    newuserNameDiv.style.margin = "0 40em 0 0"
+
+    const newuserNameInput = document.createElement('input')
+    newuserNameInput.id = "new-username-input"
+    newuserNameInput.type = "text"
+    newuserNameInput.name = "new-username-input"
+    newuserNameInput.placeholder = "Username"
+
+    // password with confirm
+    const passwordInputDiv = document.createElement('div')
+    passwordInputDiv.className = "col-6 col-12-xsmall"
+    passwordInputDiv.style.margin = "0 40em 0 0"
+
+    const passwordInput = document.createElement('input')
+    passwordInput.id = "password-input"
+    passwordInput.type = "password"
+    passwordInput.name = "password-input"
+    passwordInput.placeholder = "Password"
+    
+    // confirmPassword
+
+    const confirmInputDiv = document.createElement('div')
+    confirmInputDiv.className = "col-6 col-12-xsmall"
+    confirmInputDiv.style.margin = "0 40em 0 0"
+
+    const confirmInput = document.createElement('input')
+    confirmInput.id = "confirm-input"
+    confirmInput.type = "password"
+    confirmInput.name = "confirm-input"
+    confirmInput.placeholder = "Confirm Password"
+
+    // Shoe Size
+
+    const sizeInputDiv = document.createElement('div')
+    sizeInputDiv.className = "col-6 col-12-xsmall"
+    sizeInputDiv.style.margin = "0 40em 0 0"
+
+    const sizeInput = document.createElement('input')
+    sizeInput.id = "size-input"
+    sizeInput.type = "number"
+    sizeInput.name = "size-input"
+    sizeInput.placeholder = "Size"
+
+    
+
+    const actionsDiv = document.createElement('div')
+    actionsDiv.className = "col-12"
+    // const actionsUl = document.createElement('ul')
+
+    // const actionLi1 = document.createElement('li')
+    const submitButton = document.createElement('input')
+    submitButton.type = "submit"
+    submitButton.value = "Login"
+    submitButton.className = "primary"
+
+    // const actionLi2 = document.createElement('li')
+    const signUpButton = document.createElement('button')
+    signUpButton.innerText = "Sign Up"
+    signUpButton.style.marginLeft = "1em"
+
+    // put form together
+    loginForm.appendChild(usernameInputDiv)
+    usernameInputDiv.appendChild(usernameInput)
+    loginForm.appendChild(lineBreak2)
+    loginForm.appendChild(passwordInputDiv)
+    passwordInputDiv.appendChild(passwordInput)
+
+    actionsDiv.appendChild(submitButton)
+    actionsDiv.appendChild(signUpButton)
+    loginForm.appendChild(lineBreak3)
+    loginForm.appendChild(actionsDiv)
+
+    loginTargetDiv.appendChild(loginText)
+    loginTargetDiv.appendChild(lineBreak)
+    loginTargetDiv.appendChild(errorMessageDiv)
+    loginTargetDiv.appendChild(loginFormDiv)
+    loginTargetDiv.appendChild(lineBreak4)
+    loginTargetDiv.appendChild(lineBreak5)
+    loginTargetDiv.appendChild(lineBreak6)
+    loginFormDiv.appendChild(loginForm)
+    // debugger
+    function hideIncorrectPasswordMessage(){
+        errorMessageDiv.style.display = "none"
+    }    
+
+    submitButton.addEventListener('click', function(event){
+        event.preventDefault()
+        // usernameInput.value
+        // passwordInput.value
+        fetch('http://localhost:3000/users')
+        .then(response => response.json())
+        .then((data) => {
+            data.forEach(function(user){
+                if (user.username === usernameInput.value && user.password === passwordInput.value){
+                    // debugger
+                    // setCurrentUser(user)
+                    toggleShowPage()
+                    toggleHideLoginScreen()
+                    hideIncorrectPasswordMessage()
+                    
+                } else {
+                    //incorrect username or password message
+                    errorMessageDiv.style.display = "block"
+                }
+            })
+        })
+    })
+}
+
+// function setCurrentUser(user){
+//     debugger
+//     const hiddenStorageDiv = document.querySelector('#hidden-storage')
+//     const currentUserP = hiddenStorageDiv.querySelector('p')
+//     // currentUserP.style.display = "none"
+//     currentUserP.innerText = `${user}`
+// }
+
+function toggleShowPage(){
+    // debugger
+    const parentElement = document.querySelector('#main-body')
+    // parentElement.style.display = "none"
+    if (parentElement.style.display === "none") {
+        parentElement.style.display = "block";
+      } else {
+        parentElement.style.display = "none";
+      }
 }
 
 function renderDealOfTheDay(tiles){
@@ -160,26 +376,55 @@ function addTilesToPage(tiles){
         shoeTile.appendChild(shoeImage)
         shoeTile.appendChild(shoeName)
         shoeTile.appendChild(shoePrice)
-        debugger
+        // debugger
         shoeTile.appendChild(addToCartButton)
         // debugger
         shoeTileParent.appendChild(shoeTile)
     })
 }
 
-function renderHeader(){
+function renderYourCartButton(){
     const pageHeader = document.querySelector('#header')
     let yourCartButton = pageHeader.querySelector('button')
+    yourCartButton.className = "primary"
+    // debugger
     yourCartButton.addEventListener('click', function(event){
-        clearPage()
+        toggleShowPage()
         renderCart()
-        debugger
+        // debugger
     })
 }
 
 function renderCart(){
-
+    const currentUser = document.querySelector('#hidden-storage')
+    debugger
 }
+
+function renderHeader(){
+    const pageHeader = document.querySelector('#header')
+    const iconsUl = pageHeader.querySelector('.icons')
+    // let yourCartButton = pageHeader.querySelector('button')
+    // yourCartButton.addEventListener('click', function(event){
+    //     clearPage()
+    //     renderCart()
+    //     
+    // })
+    // 
+    renderYourCartButton()
+    const signUpButton = iconsUl.querySelector('.sign-up')
+    signUpButton.addEventListener('click', function(event){
+        // renderSignUpScreen()
+    })
+    
+    const loginButton = iconsUl.querySelector('.log-in')
+    // debugger
+    loginButton.addEventListener('click', function(event){
+        // console.log(event.target)
+        renderLoginScreen()
+    })
+}
+
+
 
 
 
@@ -390,7 +635,7 @@ function clearPage(){
     //     .then(function(object){
     //         console.log(object)
     //     })   
-    // }
+    // }og
     
     
     

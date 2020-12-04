@@ -3801,3 +3801,1758 @@ Processing by UsersController#index as */*
 Completed 200 OK in 22ms (Views: 0.5ms | ActiveRecord: 1.8ms | Allocations: 9659)
 
 
+Started GET "/shoes" for ::1 at 2020-12-04 13:15:44 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.6ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 64ms (Views: 55.7ms | ActiveRecord: 1.4ms | Allocations: 21130)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:16:24 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.7ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 53ms (Views: 43.1ms | ActiveRecord: 6.4ms | Allocations: 22051)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:16:45 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 1.5ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:17:12 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.8ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (1.0ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 2.9ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:17:21 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 1.1ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:17:44 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.6ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 1.8ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:18:13 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 1.5ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:18:19 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 1.6ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 13:18:38 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 31ms (Views: 0.5ms | ActiveRecord: 3.2ms | Allocations: 9663)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:18:38 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.2ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.7ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 13:18:59 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 2450)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:18:59 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.9ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:19:22 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.7ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 2.5ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:19:23 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.7ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 1.4ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:23:23 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 1.9ms | Allocations: 6402)
+
+
+Started GET "/users" for ::1 at 2020-12-04 13:24:01 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 1.1ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:24:01 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.2ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 1.1ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:26:21 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 1.4ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:27:41 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.8ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 1.6ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:27:57 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 1.3ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:29:15 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 2.0ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:31:56 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (1.2ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 2.1ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:34:32 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 1.6ms | Allocations: 3317)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:36:16 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (2.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 18.9ms | ActiveRecord: 3.5ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:36:42 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 1.5ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:36:54 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.2ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 2.7ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:37:03 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 1.0ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:37:35 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 1.3ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:37:45 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.8ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 1.5ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:38:52 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 1.2ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:39:07 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 1.2ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:43:17 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 21.4ms | ActiveRecord: 2.2ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:44:28 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 1.3ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:45:11 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 1.1ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:45:31 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.8ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 2.1ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:45:50 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 1.4ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:47:53 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 1.2ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 13:48:01 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 29ms (Views: 14.5ms | ActiveRecord: 1.7ms | Allocations: 2452)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:50:24 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.8ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 2.5ms | Allocations: 3317)
+
+
+Started GET "/users" for ::1 at 2020-12-04 13:50:29 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 0.9ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:50:33 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (2.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 18.5ms | ActiveRecord: 3.7ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 13:50:41 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 10ms (Views: 1.6ms | ActiveRecord: 0.9ms | Allocations: 2449)
+
+
+Started GET "/users" for ::1 at 2020-12-04 13:51:41 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 1.0ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:53:44 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 1.3ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:56:14 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.7ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 1.4ms | Allocations: 3317)
+
+
+Started GET "/users" for ::1 at 2020-12-04 13:56:20 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 12ms (Views: 1.1ms | ActiveRecord: 0.8ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 13:59:56 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.2ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 1.8ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:00:03 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 1.3ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:00:25 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 1.3ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:00:33 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 0.8ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:00:35 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.7ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 1.4ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:01:43 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 1.3ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:02:10 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 2.1ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:02:16 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 15ms (Views: 0.7ms | ActiveRecord: 1.6ms | Allocations: 2449)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:02:22 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 17ms (Views: 0.7ms | ActiveRecord: 1.1ms | Allocations: 2452)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:02:25 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:02:33 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.9ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 2.7ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:03:00 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 2.4ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:03:05 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 1.4ms | Allocations: 2449)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:03:08 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 1.8ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:03:19 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.6ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 1.8ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:03:23 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 10ms (Views: 1.2ms | ActiveRecord: 0.8ms | Allocations: 2449)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:03:26 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:03:33 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.6ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 1.9ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:03:48 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 11ms (Views: 0.7ms | ActiveRecord: 0.9ms | Allocations: 2449)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:03:57 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 1.0ms | Allocations: 2449)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:03:58 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 1.0ms | Allocations: 2449)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:04:02 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 1.0ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:06:23 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.6ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 70ms (Views: 52.3ms | ActiveRecord: 7.7ms | Allocations: 22051)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:06:54 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 28ms (Views: 0.7ms | ActiveRecord: 1.9ms | Allocations: 9663)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:07:21 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (8.2ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 34ms (Views: 24.9ms | ActiveRecord: 9.2ms | Allocations: 3314)
+
+
+Started GET "/shoes" for 127.0.0.1 at 2020-12-04 14:07:56 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 1.0ms | Allocations: 3315)
+
+
+Started GET "/shoes" for 127.0.0.1 at 2020-12-04 14:08:43 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.9ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:11:27 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 1.2ms | Allocations: 3314)
+
+
+Started GET "/shoes" for 127.0.0.1 at 2020-12-04 14:11:38 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 1.0ms | Allocations: 3314)
+
+
+Started GET "/shoes" for 127.0.0.1 at 2020-12-04 14:11:39 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.2ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.9ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:11:53 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.7ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 1.5ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:12:48 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.8ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 1.8ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:13:49 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 1.3ms | Allocations: 3314)
+
+
+Started GET "/shoes" for 127.0.0.1 at 2020-12-04 14:14:02 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 1.0ms | Allocations: 3314)
+
+
+Started GET "/shoes" for 127.0.0.1 at 2020-12-04 14:14:23 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 1.1ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:15:43 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (5.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 52ms (Views: 41.6ms | ActiveRecord: 5.8ms | Allocations: 3315)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:16:12 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.6ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 1.6ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:16:44 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 1.8ms | Allocations: 3315)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:17:04 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 1.4ms | Allocations: 3317)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:17:44 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 1.3ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:17:50 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 1.6ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:18:24 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 1.2ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:18:47 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.9ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 1.8ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:19:25 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 2.5ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:19:56 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.9ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 2.2ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:21:22 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 1.2ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:21:33 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 1.5ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:21:41 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:23:02 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.8ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 1.6ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:27:04 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.2ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 2.3ms | Allocations: 4782)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:27:14 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 0.9ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:30:02 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (1.8ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 52ms (Views: 48.3ms | ActiveRecord: 2.7ms | Allocations: 3320)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:30:07 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 1.0ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:30:46 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.2ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 17.6ms | ActiveRecord: 2.2ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:30:53 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 0.8ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:32:37 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.7ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.7ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 1.9ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:32:46 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.9ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 2.3ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:32:49 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.6ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 1.6ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:33:05 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.8ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 1.7ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:33:09 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (1.2ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 2.4ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:33:53 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (1.8ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 2.6ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:34:00 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 1.5ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:34:03 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 1.4ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:35:40 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.7ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 1.5ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:35:47 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 11ms (Views: 0.6ms | ActiveRecord: 1.1ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:35:53 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.9ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (1.0ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 56ms (Views: 52.6ms | ActiveRecord: 2.6ms | Allocations: 3317)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:35:57 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (1.0ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 1.7ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:36:23 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 1.9ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:36:28 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.7ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 1.6ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:37:34 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 85ms (Views: 66.5ms | ActiveRecord: 9.0ms | Allocations: 22087)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:37:57 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.7ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 1.5ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:43:58 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 1.5ms | Allocations: 3370)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:44:05 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.8ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 2.2ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:44:18 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.8ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 2.1ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:44:23 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 24ms (Views: 0.9ms | ActiveRecord: 2.5ms | Allocations: 9825)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:44:48 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 1.2ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:44:53 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:45:13 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.1ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 1.9ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:45:19 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 11ms (Views: 0.7ms | ActiveRecord: 1.0ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:46:10 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 1.4ms | Allocations: 3317)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:46:14 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 1.5ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:46:20 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 12ms (Views: 0.9ms | ActiveRecord: 1.1ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:47:58 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (3.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 22.5ms | ActiveRecord: 4.5ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:48:06 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 14ms (Views: 2.0ms | ActiveRecord: 1.1ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:49:11 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 2.3ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:49:17 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 11ms (Views: 1.0ms | ActiveRecord: 0.9ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:51:18 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (1.9ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 31.1ms | ActiveRecord: 3.3ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:51:22 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 14ms (Views: 3.0ms | ActiveRecord: 0.8ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:51:34 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.3ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 1.0ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:51:40 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 19ms (Views: 1.5ms | ActiveRecord: 0.9ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:52:30 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (2.0ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (6.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 63ms (Views: 52.8ms | ActiveRecord: 8.9ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:52:38 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (1.8ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 44.1ms | ActiveRecord: 2.6ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:52:46 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 2450)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:53:42 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 75ms (Views: 56.6ms | ActiveRecord: 7.8ms | Allocations: 22070)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:53:48 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 24ms (Views: 0.5ms | ActiveRecord: 2.8ms | Allocations: 9659)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:54:21 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 1.4ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:54:27 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:54:52 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (1.1ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 2.1ms | Allocations: 3317)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:54:58 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 12ms (Views: 1.1ms | ActiveRecord: 1.0ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:55:21 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (2.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 3.0ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:55:25 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 0.9ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:56:19 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 1.3ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:56:25 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 10ms (Views: 0.7ms | ActiveRecord: 1.0ms | Allocations: 2449)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:56:33 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 2449)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:56:39 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 2449)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:56:44 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 2.2ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:57:16 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.6ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (2.1ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 152ms (Views: 146.8ms | ActiveRecord: 3.9ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:58:54 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.5ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.6ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 1.7ms | Allocations: 3314)
+
+
+Started GET "/shoes" for ::1 at 2020-12-04 14:58:59 -0600
+Processing by ShoesController#index as */*
+  [1m[36mShoe Load (0.4ms)[0m  [1m[34mSELECT "shoes".* FROM "shoes"[0m
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" INNER JOIN "shopping_cart_shoes" ON "shopping_carts"."id" = "shopping_cart_shoes"."shopping_cart_id" WHERE "shopping_cart_shoes"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."shoe_id" = ?[0m  [["shoe_id", 1]]
+  ↳ app/controllers/shoes_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 1.2ms | Allocations: 3314)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:59:07 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 14ms (Views: 0.7ms | ActiveRecord: 1.2ms | Allocations: 2449)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:59:14 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 9ms (Views: 1.0ms | ActiveRecord: 0.8ms | Allocations: 2449)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:59:20 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 11ms (Views: 0.9ms | ActiveRecord: 0.9ms | Allocations: 2449)
+
+
+Started GET "/users" for ::1 at 2020-12-04 14:59:23 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `puts'
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 1.0ms | Allocations: 2449)
+
+
