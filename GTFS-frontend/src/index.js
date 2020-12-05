@@ -368,6 +368,10 @@ function addTilesToPage(tiles){
 
             const cartItemImage = document.createElement('img')
             cartItemImage.src = tileData.image_url
+            cartItemImage.setAttribute('width','50px')
+            cartItemImage.setAttribute('height','50px')
+
+            
 
             const cartItemName = document.createElement('h4')
             cartItemName.innerText = tileData.name
