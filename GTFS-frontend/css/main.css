@@ -2074,6 +2074,50 @@ button,
         top: 1em;
         width: 5em; } }
 
+.box-shadow-menu {
+  position: relative;
+  padding-left: none;
+  border-bottom: none;
+}
+.box-shadow-menu:before {
+  border-bottom: none;
+  cursor: pointer;
+  content: "";
+  margin: 0em 0 0 1.5em;
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1.45em;
+  height: 0.21em;
+  background:rgb(235, 106, 106);
+  /* box-shadow: 
+    0 0.5em 0 0  rgb(233, 92, 92),
+    0 1em 0 0  rgb(233, 92, 92); */
+}
+#box-shadow-two {
+  border-bottom: none;
+  content: "";
+  margin: 2.51em 0 0 1.5em;
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1.45em;
+  height: 0.21em;
+  background: rgb(235, 106, 106);
+}
+
+#box-shadow-three {
+  border-bottom: none;
+  content: "";
+  margin: 3.0em 0 0 1.5em;
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1.45em;
+  height: 0.21em;
+  background: rgb(235, 106, 106);
+}
+        
 /* Header */
 #header {
   display: -moz-flex;

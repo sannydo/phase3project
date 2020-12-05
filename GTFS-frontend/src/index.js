@@ -247,7 +247,9 @@ function renderSignUpScreen(){
     sizeInput.id = "size-input"
     sizeInput.type = "number"
     sizeInput.name = "size-input"
-    sizeInput.placeholder = "Size"
+    sizeInput.min = "7"
+    sizeInput.max = "14"
+    sizeInput.placeholder = "Size (between 7-14)"
 
     
 
@@ -305,7 +307,7 @@ function renderSignUpScreen(){
                     toggleShowPage()
                     toggleHideLoginScreen()
                     hideIncorrectPasswordMessage()
-                    
+                    // console.log(user)
                 } else {
                     //incorrect username or password message
                     errorMessageDiv.style.display = "block"
@@ -360,6 +362,29 @@ function addTilesToPage(tiles){
         addToCartButton.innerText = "Add To Cart"
         addToCartButton.addEventListener('click', function(event){
             console.log(event.target)
+            const cartItem = document.createElement('article')
+            const cartItemImageFrame = document.createElement('a')
+            cartItemImageFrame.className = "image"
+
+            const cartItemImage = document.createElement('img')
+            cartItemImage.src = tileData.image_url
+
+            const cartItemName = document.createElement('h4')
+            cartItemName.innerText = tileData.name
+
+            const cartItemPrice = document.createElement('p')
+            cartItemPrice.innerText = tileData.price
+            cartItemPrice.style.color = "green"
+            cartItemPrice.style.fontSize = "1.8em"
+
+            cartItemImageFrame.appendChild(cartItemImage)
+            cartItem.appendChild(cartItemImageFrame)
+            cartItem.appendChild(cartItemName)
+            cartItem.appendChild(cartItemPrice)
+
+            const cart = document.querySelector('.mini-posts')
+            
+            cart.appendChild(cartItem)
         })
 
         const shoeImage = document.createElement('img')
@@ -383,21 +408,67 @@ function addTilesToPage(tiles){
     })
 }
 
-function renderYourCartButton(){
-    const pageHeader = document.querySelector('#header')
-    let yourCartButton = pageHeader.querySelector('button')
-    yourCartButton.className = "primary"
-    // debugger
-    yourCartButton.addEventListener('click', function(event){
-        toggleShowPage()
-        renderCart()
-        // debugger
-    })
-}
+// function renderItemToCart(tileData){
+//     const cartItem = document.createElement('article')
+//     const cartItemImageFrame = document.createElement('a')
+//     cartItemImageFrame.className = "image"
 
-function renderCart(){
-    const currentUser = document.querySelector('#hidden-storage')
-    debugger
+//     const cartItemImage = document.createElement('img')
+//     cartItemImage.src = tileData.image_url
+
+//     const cartItemName = document.createElement('h4')
+//     cartItemName.innerText = tileData.name
+
+//     const cartItemPrice = document.createElement('p')
+//     cartItemPrice.innerText = tileData.price
+//     cartItemPrice.style.color = "green"
+//     cartItemPrice.style.fontSize = "1.8em"
+
+//     cartItemImageFrame.appendChild(cartItemImage)
+//     cartItem.appendChild(cartItemImageFrame)
+//     cartItem.appendChild(cartItemName)
+//     cartItem.appendChild(cartItemPrice)
+
+//     const cart = document.querySelector('.mini-posts')
+            
+//     cart.appendChild(cartItem)
+// }
+
+// function renderYourCartButton(){
+//     const pageHeader = document.querySelector('#header')
+//     let yourCartButton = pageHeader.querySelector('button')
+//     yourCartButton.className = "primary"
+//     // debugger
+//     yourCartButton.addEventListener('click', function(event){
+//         // toggleShowPage()
+//         // renderCart()
+//         // debugger
+//         //open hamburger menu to see your cart
+//         console.log(event.target)
+//     })
+// }
+
+// function renderCart(){
+//     const currentUser = document.querySelector('#hidden-storage')
+//     debugger
+// }
+
+function toggleHideSidebar(){
+    const sideBar = document.querySelector('#sidebar')
+    // sideBar.firstElementChild.style.display = "none"
+    if (sideBar.style.display === "none") {
+        sideBar.style.display = "block"
+    } else {
+        sideBar.style.display = "none";
+        const shadowMenuHamburger = document.querySelector('#main').firstElementChild
+        // debugger
+        shadowMenuHamburger.addEventListener('click', function(event){
+            console.log(event.target)
+            toggleHideSidebar()
+        })
+    }
+
+
 }
 
 function renderHeader(){
@@ -410,7 +481,13 @@ function renderHeader(){
     //     
     // })
     // 
-    renderYourCartButton()
+    // renderYourCartButton()
+    const sideBarHamburger = document.querySelector('#sidebar').lastElementChild
+    sideBarHamburger.addEventListener('click', function(event){
+        console.log(event)
+        toggleHideSidebar()
+    })
+
     const signUpButton = iconsUl.querySelector('.sign-up')
     signUpButton.addEventListener('click', function(event){
         // renderSignUpScreen()
@@ -422,9 +499,20 @@ function renderHeader(){
         // console.log(event.target)
         renderLoginScreen()
     })
+    renderSideBar()
 }
 
-
+function renderSideBar(){
+    const yourCartDiv = document.querySelector('.mini-posts').parentElement
+    const checkoutButton = yourCartDiv.querySelector('.actions').lastElementChild.firstElementChild
+    checkoutButton.innerText = "Checkout Items"
+    // debugger
+    checkoutButton.addEventListener('click', function(event){
+        event.preventDefault()
+        const miniPostsDiv = document.querySelector('.mini-posts')
+        removeAllChildNodes(miniPostsDiv)
+    })
+}
 
 
 
@@ -480,6 +568,34 @@ function renderDealOfTheDayItem(tileData){
 
     let addToCartButton = buttonParentUl.querySelector('a')
     addToCartButton.innerText = "Add To Cart"
+    addToCartButton.addEventListener('click', function(event){
+        // console.log(event)
+        event.preventDefault()
+        const cartItem = document.createElement('article')
+        const cartItemImageFrame = document.createElement('a')
+        cartItemImageFrame.className = "image"
+    
+        const cartItemImage = document.createElement('img')
+        cartItemImage.src = tileData.image_url
+    
+        const cartItemName = document.createElement('h4')
+        cartItemName.innerText = tileData.name
+    
+        const cartItemPrice = document.createElement('p')
+        cartItemPrice.innerText = tileData.price
+        cartItemPrice.style.color = "green"
+        cartItemPrice.style.fontSize = "1.8em"
+    
+        cartItemImageFrame.appendChild(cartItemImage)
+        cartItem.appendChild(cartItemImageFrame)
+        cartItem.appendChild(cartItemName)
+        cartItem.appendChild(cartItemPrice)
+    
+        const cart = document.querySelector('.mini-posts')
+                
+        cart.appendChild(cartItem)
+
+    })
 
     let itemStockDisplay = content.querySelector('#item-stock-display')
     itemStockDisplay.innerText = `Remaining Stock: ${tileData.stock}`
