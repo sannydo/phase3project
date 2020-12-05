@@ -368,10 +368,6 @@ function addTilesToPage(tiles){
 
             const cartItemImage = document.createElement('img')
             cartItemImage.src = tileData.image_url
-            cartItemImage.setAttribute('width','50px')
-            cartItemImage.setAttribute('height','50px')
-
-            
 
             const cartItemName = document.createElement('h4')
             cartItemName.innerText = tileData.name
@@ -462,14 +458,23 @@ function toggleHideSidebar(){
     // sideBar.firstElementChild.style.display = "none"
     if (sideBar.style.display === "none") {
         sideBar.style.display = "block"
-    } else {
-        sideBar.style.display = "none";
-        const shadowMenuHamburger = document.querySelector('#main').firstElementChild
-        // debugger
-        shadowMenuHamburger.addEventListener('click', function(event){
+        const newMenuHamburger = document.querySelector('#sidebar').lastElementChild
+        // const shadowMenuHamburger = document.querySelector('#main').firstElementChild
+        // shadowMenuHamburger.style.marginLeft = "23em"
+        // // // debugger
+        newMenuHamburger.style.display = "block"
+        newMenuHamburger.addEventListener('click', function(event){
             console.log(event.target)
             toggleHideSidebar()
         })
+    } else {
+        sideBar.style.display = "none";
+        // const shadowMenuHamburger = document.querySelector('#main').firstElementChild
+        // // debugger
+        // shadowMenuHamburger.addEventListener('click', function(event){
+        //     console.log(event.target)
+        //     toggleHideSidebar()
+        // })
     }
 
 
@@ -486,8 +491,8 @@ function renderHeader(){
     // })
     // 
     // renderYourCartButton()
-    const sideBarHamburger = document.querySelector('#sidebar').lastElementChild
-    sideBarHamburger.addEventListener('click', function(event){
+    const shadowMenuHamburger = document.querySelector('#main').firstElementChild
+    shadowMenuHamburger.addEventListener('click', function(event){
         console.log(event)
         toggleHideSidebar()
     })

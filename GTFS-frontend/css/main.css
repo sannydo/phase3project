@@ -2075,47 +2075,79 @@ button,
         width: 5em; } }
 
 .box-shadow-menu {
-  position: relative;
-  padding-left: none;
-  border-bottom: none;
-}
-.box-shadow-menu:before {
+  /* position: relative;
+  padding-left: none; */
   border-bottom: none;
   cursor: pointer;
   content: "";
-  margin: 0em 0 0 1.5em;
+  margin: 1.9em 0 0 1.5em;
+  /* padding: 0.5em; */
+  padding-left: 1.45em;
+  padding-bottom: .3em;
   position: absolute;
   left: 0;
   top: 0.25em;
   width: 1.45em;
-  height: 0.21em;
-  background:rgb(235, 106, 106);
+  height: 1.25em;
+  background: linear-gradient(
+    to bottom, 
+    rgb(235, 103, 103), rgb(235, 103, 103) 20%, 
+    white 20%, white 40%, 
+    rgb(235, 103, 103) 40%, rgb(235, 103, 103) 60%, 
+    white 60%, white 80%, 
+    rgb(235, 103, 103) 80%, rgb(235, 103, 103) 100%
+  );
+}
+/* .box-shadow-menu:before { */
+  /* border-style: solid;
+  border-width: 0.2em; */
+  /* border-bottom-color: blue;
+  border-bottom: solid;
+  border-bottom-width: 2em; */
+  /* cursor: pointer;
+  content: "";
+  margin: 1.9em 0 0 1.5em; */
+  /* padding: 0.5em; */
+  /* padding-left: 1.45em;
+  padding-bottom: .3em;
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1.45em;
+  height: 1.5em;
+  background: linear-gradient(
+    to bottom, 
+    rgb(235, 103, 103), rgb(235, 103, 103) 20%, 
+    white 20%, white 40%, 
+    rgb(235, 103, 103) 40%, rgb(235, 103, 103) 60%, 
+    white 60%, white 80%, 
+    rgb(235, 103, 103) 80%, rgb(235, 103, 103) 100%
+  ); */
+  /* background:rgb(235, 103, 103); */
   /* box-shadow: 
     0 0.5em 0 0  rgb(233, 92, 92),
     0 1em 0 0  rgb(233, 92, 92); */
-}
-#box-shadow-two {
-  border-bottom: none;
-  content: "";
-  margin: 2.51em 0 0 1.5em;
-  position: absolute;
-  left: 0;
-  top: 0.25em;
-  width: 1.45em;
-  height: 0.21em;
-  background: rgb(235, 106, 106);
-}
+/* } */
 
-#box-shadow-three {
-  border-bottom: none;
+.gradient-menu {
+  padding-left: 1.25em;
+  position: relative;
+}
+.gradient-menu:before {
   content: "";
-  margin: 3.0em 0 0 1.5em;
   position: absolute;
   left: 0;
-  top: 0.25em;
-  width: 1.45em;
-  height: 0.21em;
-  background: rgb(235, 106, 106);
+  top: 0.21em;
+  bottom: 0.21em;
+  width: 1em;
+  background: linear-gradient(
+    to bottom, 
+    black, black 20%, 
+    white 20%, white 40%, 
+    black 40%, black 60%, 
+    white 60%, white 80%, 
+    black 80%, black 100%
+  );
 }
         
 /* Header */
