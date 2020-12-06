@@ -444,7 +444,7 @@ function toggleShowBrowseByOptions(){
         // browseByLiArray2.push(browseByLiArray.slice(3, 4))
         browseByLiArray2.push(browseByLiArray.slice(5, 6))
         browseByLiArray2.push(browseByLiArray.slice(7, 8))
-    
+        // debugger
         var browseByLiArray3 = browseByLiArray2.flat()
         browseByLiArray3.forEach(function(li){
             li.style.display = "block"
@@ -453,8 +453,7 @@ function toggleShowBrowseByOptions(){
         var browseOpt1 = browseByLiArray3[0]
         browseOpt1.addEventListener('click', function(event){
             event.preventDefault()
-            // toggleShowBrands()
-            sortTilesByPrice()
+            sortTilesByWomen()
         })
 
         var browseOpt2 = browseByLiArray3[1]
@@ -466,13 +465,13 @@ function toggleShowBrowseByOptions(){
         var browseOpt3 = browseByLiArray3[2]
         browseOpt3.addEventListener('click', function(event){
             event.preventDefault()
-            sortTilesByWomen()
+            sortTilesByPrice()
         })
         
         // var browseOpt4 = browseByLiArray3[3]
         // browseOpt4.addEventListener('click', function(event){
         //     event.preventDefault()
-        //     sortTilesByWomen()
+            // toggleShowBrands()
         // })
 
 
