@@ -6,11 +6,23 @@ class ShoesController < ApplicationController
 
     def show
         shoe = Shoe.find_by(id: params[:id])
-        if user
+        if shoe
             render json: shoe.slice(:id, :name, :brand, :image_url)
         else
             render json: { message: 'Item not found' }
         end
         
+    end
+
+    def update
+        shoe = Shoe.find(params[:id])
+        shoe.update_attributes(shoe_params)
+        render json: shoe
+    end
+
+    private
+
+    def shoe_params
+        params.require(:shoe).permit(:name, :brand, :image_url, :stock, :description)
     end
 end

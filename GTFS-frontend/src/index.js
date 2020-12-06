@@ -235,6 +235,7 @@ function addTilesToPage(tiles){
             
             cart.appendChild(cartItem)
             renderSideBar(tileData.price)
+            decrementStock(tileData, addTilesToPage)
         })
 
         const shoeImage = document.createElement('img')
@@ -320,14 +321,58 @@ function renderHeader(){
     renderSideBar()
 }
 
+function decrementStock(shoe, parentFunc){
+    // debugger
+    var newStock = shoe.stock - 1
+    fetch(`http://localhost:3000/shoes/${shoe.id}`, {
+        method: 'PATCH',
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+        },
+        body: JSON.stringify({
+            "stock": newStock
+        })
+    })
+    .then(resource => resource.json())
+    .then(function(data){
+        console.log(data)
+        // debugger
+        const stockDisplay = document.querySelector('#item-stock-display')
+        stockDisplay.innerText = `Remaining Stock: ${data.stock}`
+    })
+}
+
 function renderSideBar(addSum = 0){
     const yourCartDiv = document.querySelector('.mini-posts').parentElement
     const checkoutButton = yourCartDiv.querySelector('.actions').lastElementChild.firstElementChild
     checkoutButton.innerText = "Checkout Items"
     // debugger
+    let shoeIdArr = [0]
     checkoutButton.addEventListener('click', function(event){
         event.preventDefault()
         const miniPostsDiv = document.querySelector('.mini-posts')
+        // var miniPostsNodeList = miniPostsDiv.childNodes
+        // var miniPostsArray = Array.prototype.slice.call(miniPostsNodeList)
+        // var miniPostsArray2 = miniPostsArray.slice(5)
+
+        // debugger
+        // fetch(`http://localhost:3000/shoes`)
+        // .then(resource => resource.json())
+        // .then((data) => {
+        //     console.log(data)
+        //     data.forEach((shoe) => {
+        //         console.log(shoe)
+        //         miniPostsArray2.forEach((miniPostNode) => {
+        //             var nodeString = miniPostNode.innerText
+        //             if (nodeString.includes(`${shoe.name}`)){
+        //                 debugger
+        //                 shoeIdArr.push(shoe.id)
+        //             }
+        //         })
+        //     })
+        // })
+        // debugger
         removeAllChildNodes(miniPostsDiv)
         const cartTotal = document.querySelector('#cart-total')
         cartTotal.innerText = "$0"
@@ -393,6 +438,7 @@ function renderItemPage(tileData){
                 
         cart.appendChild(cartItem)
         renderSideBar(tileData.price)
+        decrementStock(tileData, renderItemPage)
     })
     buttonParentUl.appendChild(addToCartButton)
 
@@ -460,6 +506,7 @@ function renderDealOfTheDayItem(tileData){
                 
         cart.appendChild(cartItem)
         renderSideBar(tileData.price)
+        decrementStock(tileData, renderDealOfTheDayItem)
     })
 
     let itemStockDisplay = content.querySelector('#item-stock-display')
