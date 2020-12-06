@@ -210,16 +210,36 @@
 										<h2>Menu</h2>
 									</header>
 									<ul class="sidebar">
-										<li><a class="sidebar-item" href="index.html">All Shoes</a></li>
-										<li><a  class="sidebar-item" href="generic.html">Popular</a></li>
+										<li id="all-shoes-sidebar-li"><a class="sidebar-item" href="index.html">All Shoes</a></li>
+										<li id="popular-shoes-li"><a  class="sidebar-item">Popular</a></li>
 										<!-- <li><a href="elements.html">Elements</a></li> -->
 										<li>
 											<span class="opener">Browse By</span>
-											<ul>
-												<li><a class="browse-by" href="#">Brand</a></li>
-												<li><a class="browse-by" href="#">Price</a></li>
-												<li><a href="#">Men's Shoes</a></li>
-												<li><a href="#">Women's Shoes</a></li>
+											<ul id="browse-by-ul">
+												<!-- <li id="brand-drop-down"><span class="opener">Brand</span>
+													<ul style="display: none;">
+														<li id="nike">Nike</li>
+														<li id="air-jordan">Air Jordan</li>
+														<li id="adidas">Adidas</li>
+														<li id="reebok">Reebok</li>
+														<li id="new-balance">New Balance</li>
+														<li id="converse">Converse</li>
+													</ul>
+												</li> -->
+												<li><a class="browse-by">Price</a></li>
+												<li><a class="browse-by">Men's Shoes</a></li>
+												<li><a class="browse-by">Women's Shoes</a></li>
+											</ul>
+										</li>
+										<li id="brand-drop-down" style="display: block;">
+											<span class="opener">Brands</span>
+											<ul style="display: none;">
+												<li id="nike">Nike</li>
+												<li id="air-jordan">Air Jordan</li>
+												<li id="adidas">Adidas</li>
+												<li id="reebok">Reebok</li>
+												<li id="new-balance">New Balance</li>
+												<li id="converse">Converse</li>
 											</ul>
 										</li>
 										<!-- <li><a href="#">Etiam Dolore</a></li>

@@ -1791,7 +1791,9 @@ button,
         display: none; } }
   @media screen and (max-width: 1680px) {
     .posts article {
-      width: calc(50% - 6em); }
+      width: calc(50% - 6em);
+      height: 30em;
+    }
       .posts article:nth-last-child(3) {
         margin-bottom: 6em; } }
   @media screen and (min-width: 481px) and (max-width: 1680px) {
@@ -2091,11 +2093,11 @@ button,
   height: 1.25em;
   background: linear-gradient(
     to bottom, 
-    rgb(235, 103, 103), rgb(235, 103, 103) 20%, 
+    #f56a6a, #f56a6a 20%, 
     white 20%, white 40%, 
-    rgb(235, 103, 103) 40%, rgb(235, 103, 103) 60%, 
+    #f56a6a 40%, #f56a6a 60%, 
     white 60%, white 80%, 
-    rgb(235, 103, 103) 80%, rgb(235, 103, 103) 100%
+    #f56a6a 80%, #f56a6a 100%
   );
 }
 /* .box-shadow-menu:before { */
@@ -2128,6 +2130,15 @@ button,
     0 0.5em 0 0  rgb(233, 92, 92),
     0 1em 0 0  rgb(233, 92, 92); */
 /* } */
+
+.tile-image {
+  height: 70%;
+  width: 90%;
+}
+
+/* .shoe-tile {
+
+} */
 
 .gradient-menu {
   padding-left: 1.25em;

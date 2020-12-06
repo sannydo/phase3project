@@ -12,6 +12,39 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 });
 
+function renderPopularShoes(){
+    fetch('http://localhost:3000/shoes')
+    .then(resource => resource.json())
+    .then((data) => {
+        let newData = [0]
+        data.forEach(function(datum){
+            const popRand = Math.floor(Math.random() * 2)
+            if (popRand === 1){
+                if (newData == [0]){
+                    newData = [datum]
+                } else {
+                    newData.push(datum)
+                }
+            }
+        })
+        newData = newData.slice(1)
+        
+        clearItemTiles()
+        
+        addTilesToPage(newData)
+        // renderDealOfTheDay(newData)
+
+        renderHeader()
+        renderLoginScreen()
+        renderSignUpScreen()
+    })
+}
+
+function clearItemTiles(){
+    const productList = document.querySelector('.posts')
+    removeAllChildNodes(productList)
+}
+
 function renderLoginScreen(){
     const errorMessageDiv = document.querySelector('#error-message-div')
 
@@ -57,7 +90,6 @@ function renderLoginScreen(){
 }
 
 function toggleHideLoginScreen(){
-    // debugger
 
     const loginTargetDiv = document.querySelector('#login-target')
     if (loginTargetDiv.style.display === "none") {
@@ -73,7 +105,7 @@ function toggleHideLoginScreen(){
 }
 
 function toggleHideSignUpScreen(){
-    // debugger
+    // 
     const loginTargetDiv = document.querySelector('#sign-up-target')
     if (loginTargetDiv.style.display === "none") {
         loginTargetDiv.style.display = "block";
@@ -154,7 +186,7 @@ function renderSignUpScreen(){
 }
 
 // function setCurrentUser(user){
-//     debugger
+//     
 //     const hiddenStorageDiv = document.querySelector('#hidden-storage')
 //     const currentUserP = hiddenStorageDiv.querySelector('p')
 //     // currentUserP.style.display = "none"
@@ -162,7 +194,7 @@ function renderSignUpScreen(){
 // }
 
 // function toggleShowPage(){
-//     // debugger
+//     // 
 //     const parentElement = document.querySelector('#main-body')
 //     // parentElement.style.display = "none"
 //     if (parentElement.style.display === "none") {
@@ -183,7 +215,7 @@ function hidePage(){
 }
 
 function renderDealOfTheDay(tiles){
-    let highestStock = 400
+    let highestStock = 0
     tiles.forEach(function(tileData){
         if (tileData.stock > highestStock){
             highestStock = tileData.stock
@@ -201,6 +233,7 @@ function addTilesToPage(tiles){
     tiles.forEach(function renderTile(tileData){
         // console.log(tileData)
         const shoeTile = document.createElement('article')
+        // shoeTile.className = "shoe-tile"
 
         const shoeName = document.createElement('h3')
         shoeName.innerText = `${tileData.name}`
@@ -239,7 +272,7 @@ function addTilesToPage(tiles){
         })
 
         const shoeImage = document.createElement('img')
-        shoeImage.class = "tile-image"
+        shoeImage.className = "tile-image"
         shoeImage.src = `${tileData.image_url}`
 
         shoeName.addEventListener('click', function(event){
@@ -252,9 +285,9 @@ function addTilesToPage(tiles){
         shoeTile.appendChild(shoeImage)
         shoeTile.appendChild(shoeName)
         shoeTile.appendChild(shoePrice)
-        // debugger
+        // 
         shoeTile.appendChild(addToCartButton)
-        // debugger
+        // 
         shoeTileParent.appendChild(shoeTile)
     })
 }
@@ -267,7 +300,7 @@ function toggleHideSidebar(){
         const newMenuHamburger = document.querySelector('#sidebar').lastElementChild
         // const shadowMenuHamburger = document.querySelector('#main').firstElementChild
         // shadowMenuHamburger.style.marginLeft = "23em"
-        // // // debugger
+        // // // 
         newMenuHamburger.style.display = "block"
         newMenuHamburger.addEventListener('click', function(event){
             // console.log(event.target)
@@ -276,7 +309,7 @@ function toggleHideSidebar(){
     } else {
         sideBar.style.display = "none";
         // const shadowMenuHamburger = document.querySelector('#main').firstElementChild
-        // // debugger
+        // // 
         // shadowMenuHamburger.addEventListener('click', function(event){
         //     console.log(event.target)
         //     toggleHideSidebar()
@@ -289,14 +322,7 @@ function toggleHideSidebar(){
 function renderHeader(){
     const pageHeader = document.querySelector('#header')
     const iconsUl = pageHeader.querySelector('.icons')
-    // let yourCartButton = pageHeader.querySelector('button')
-    // yourCartButton.addEventListener('click', function(event){
-    //     clearPage()
-    //     renderCart()
-    //     
-    // })
-    // 
-    // renderYourCartButton()
+
     const shadowMenuHamburger = document.querySelector('#main').firstElementChild
     shadowMenuHamburger.addEventListener('click', function(event){
         // console.log(event)
@@ -322,7 +348,7 @@ function renderHeader(){
 }
 
 function decrementStock(shoe, parentFunc){
-    // debugger
+    // 
     var newStock = shoe.stock - 1
     fetch(`http://localhost:3000/shoes/${shoe.id}`, {
         method: 'PATCH',
@@ -337,7 +363,7 @@ function decrementStock(shoe, parentFunc){
     .then(resource => resource.json())
     .then(function(data){
         console.log(data)
-        // debugger
+        // 
         const stockDisplay = document.querySelector('#item-stock-display')
         stockDisplay.innerText = `Remaining Stock: ${data.stock}`
     })
@@ -347,32 +373,10 @@ function renderSideBar(addSum = 0){
     const yourCartDiv = document.querySelector('.mini-posts').parentElement
     const checkoutButton = yourCartDiv.querySelector('.actions').lastElementChild.firstElementChild
     checkoutButton.innerText = "Checkout Items"
-    // debugger
-    let shoeIdArr = [0]
+    
     checkoutButton.addEventListener('click', function(event){
         event.preventDefault()
         const miniPostsDiv = document.querySelector('.mini-posts')
-        // var miniPostsNodeList = miniPostsDiv.childNodes
-        // var miniPostsArray = Array.prototype.slice.call(miniPostsNodeList)
-        // var miniPostsArray2 = miniPostsArray.slice(5)
-
-        // debugger
-        // fetch(`http://localhost:3000/shoes`)
-        // .then(resource => resource.json())
-        // .then((data) => {
-        //     console.log(data)
-        //     data.forEach((shoe) => {
-        //         console.log(shoe)
-        //         miniPostsArray2.forEach((miniPostNode) => {
-        //             var nodeString = miniPostNode.innerText
-        //             if (nodeString.includes(`${shoe.name}`)){
-        //                 debugger
-        //                 shoeIdArr.push(shoe.id)
-        //             }
-        //         })
-        //     })
-        // })
-        // debugger
         removeAllChildNodes(miniPostsDiv)
         const cartTotal = document.querySelector('#cart-total')
         cartTotal.innerText = "$0"
@@ -383,6 +387,220 @@ function renderSideBar(addSum = 0){
     let currentTotal = `$${prevTotal + parseInt(addSum)}`
     totalCalc.innerText = currentTotal
     totalCalc.style.color = "green"
+
+    const popularShoesLi = document.querySelector('#popular-shoes-li')
+    popularShoesLi.addEventListener('click', function(event){
+        event.preventDefault()
+        renderPopularShoes()
+    })
+
+    const browseOpener = document.querySelector('.opener')
+
+    browseOpener.addEventListener('click', function(event){
+        event.preventDefault()
+        toggleShowBrowseByOptions()
+    })
+
+    const brandOpener = document.querySelector('#brand-drop-down').firstElementChild
+    console.log(brandOpener)
+    brandOpener.addEventListener('click', function(event){
+        event.preventDefault()
+        toggleShowBrands()
+        
+    })
+
+    const allShoesSortButton = document.querySelector('#all-shoes-sidebar-li')
+    allShoesSortButton.addEventListener('click', function(event){
+        event.preventDefault()
+        clearItemTiles()
+        debugger
+        // if (repeatFlag){
+        //     clearItemTiles
+        // }
+        fetch('http://localhost:3000/shoes')
+        .then(resource => resource.json())
+        .then((data) => {
+            clearItemTiles()
+            addTilesToPage(data)
+            renderDealOfTheDay(data)
+            
+            renderHeader()
+            renderLoginScreen()
+            renderSignUpScreen()
+        })
+
+        const repeatFlag = true
+    })
+}
+
+function toggleShowBrowseByOptions(){
+    const browseByUl = document.querySelector('#browse-by-ul')
+    if (browseByUl.style.display === "none"){
+        browseByUl.style.display = "block"
+        var browseByLiNodeList = browseByUl.childNodes
+        var browseByLiArray = Array.prototype.slice.call(browseByLiNodeList)
+        // debugger
+        var browseByLiArray2 = browseByLiArray.slice(3, 4)
+        // browseByLiArray2.push(browseByLiArray.slice(3, 4))
+        browseByLiArray2.push(browseByLiArray.slice(5, 6))
+        browseByLiArray2.push(browseByLiArray.slice(7, 8))
+    
+        var browseByLiArray3 = browseByLiArray2.flat()
+        browseByLiArray3.forEach(function(li){
+            li.style.display = "block"
+        })
+
+        var browseOpt1 = browseByLiArray3[0]
+        browseOpt1.addEventListener('click', function(event){
+            event.preventDefault()
+            // toggleShowBrands()
+            sortTilesByPrice()
+        })
+
+        var browseOpt2 = browseByLiArray3[1]
+        browseOpt2.addEventListener('click', function(event){
+            event.preventDefault()
+            sortTilesByMen()
+        })
+
+        var browseOpt3 = browseByLiArray3[2]
+        browseOpt3.addEventListener('click', function(event){
+            event.preventDefault()
+            sortTilesByWomen()
+        })
+        
+        // var browseOpt4 = browseByLiArray3[3]
+        // browseOpt4.addEventListener('click', function(event){
+        //     event.preventDefault()
+        //     sortTilesByWomen()
+        // })
+
+
+    } else {
+        browseByUl.style.display = "none"
+        var browseByLiNodeList = browseByUl.childNodes
+        var browseByLiArray = Array.prototype.slice.call(browseByLiNodeList)
+        // debugger
+        var browseByLiArray2 = browseByLiArray.slice(3, 4)
+        // browseByLiArray2.push(browseByLiArray.slice(3, 4))
+        browseByLiArray2.push(browseByLiArray.slice(5, 6))
+        browseByLiArray2.push(browseByLiArray.slice(7, 8))
+        // debugger
+        var browseByLiArray3 = browseByLiArray2.flat()
+        browseByLiArray3.forEach(function(li){
+            li.style.display = "none"
+        })
+    }
+}
+
+function toggleShowBrands(){
+    const brandUl = document.querySelector('#brand-drop-down').lastElementChild
+    console.log(brandUl)
+    if (brandUl.style.display === "none"){
+        brandUl.style.display = "block"
+
+        const nikeLi = document.querySelector('#nike')
+        nikeLi.addEventListener('click', function(event){
+            sortTilesByBrand("Nike")
+        })
+        const airJordanLi = document.querySelector('#air-jordan')
+        airJordanLi.addEventListener('click', function(event){
+            sortTilesByBrand("Air Jordan")
+        })
+        const adidasLi = document.querySelector('#adidas')
+        adidasLi.addEventListener('click', function(event){
+            sortTilesByBrand("Adidas")
+        })
+        const reebokLi = document.querySelector('#reebok')
+        reebokLi.addEventListener('click', function(event){
+            sortTilesByBrand("Reebok")
+        })
+        const newBalanceLi = document.querySelector('#new-balance')
+        newBalanceLi.addEventListener('click', function(event){
+            sortTilesByBrand("New Balance")
+        })
+        const converseLi = document.querySelector('#converse')
+        converseLi.addEventListener('click', function(event){
+            sortTilesByBrand("Converse")
+        })
+    } else {
+        brandUl.style.display = "none"
+    }
+    // const brandOpener = document.querySelector('#brand-drop-down')
+    // brandOpener.style.display = "block"
+}
+
+function sortTilesByMen(){
+    fetch('http://localhost:3000/shoes')
+    .then(resource => resource.json())
+    .then((data) => {
+        // let halfwayPoint = 32
+        data = data.slice(23)
+
+        clearItemTiles()
+        addTilesToPage(data)
+        renderDealOfTheDay(data)
+
+        renderHeader()
+        renderLoginScreen()
+        renderSignUpScreen()
+    })
+}
+
+function sortTilesByWomen(){
+    fetch('http://localhost:3000/shoes')
+    .then(resource => resource.json())
+    .then((data) => {
+        // let halfwayPoint = 23
+        data = data.slice(1, 23)
+
+        clearItemTiles()
+        addTilesToPage(data)
+        renderDealOfTheDay(data)
+
+        renderHeader()
+        renderLoginScreen()
+        renderSignUpScreen()
+    })
+}
+
+function sortTilesByBrand(brandName){
+    fetch('http://localhost:3000/shoes')
+    .then(resource => resource.json())
+    .then((data) => {
+        let brandedShoes = [0]
+        data.forEach(function(shoe){
+            if (shoe.name.includes(brandName)){
+                brandedShoes.push(shoe)
+            }
+        })
+
+        brandedShoes = brandedShoes.slice(1)
+
+        clearItemTiles()
+        addTilesToPage(brandedShoes)
+        renderDealOfTheDay(brandedShoes)
+
+        renderHeader()
+        renderLoginScreen()
+        renderSignUpScreen()
+    })
+}
+
+function sortTilesByPrice(){
+    fetch('http://localhost:3000/shoes')
+    .then(resource => resource.json())
+    .then((data) => {
+
+
+        clearItemTiles()
+        addTilesToPage(data)
+        renderDealOfTheDay(data)
+
+        renderHeader()
+        renderLoginScreen()
+        renderSignUpScreen()
+    })
 }
 
 function renderItemPage(tileData){
@@ -442,26 +660,28 @@ function renderItemPage(tileData){
     })
     buttonParentUl.appendChild(addToCartButton)
 
-    // debugger
+    // 
 
     let itemStockDisplay = content.querySelector('#item-stock-display')
     itemStockDisplay.innerText = `Remaining Stock: ${tileData.stock}`
 
     let imageObject = banner.querySelector('span')
     let itemImage = imageObject.firstElementChild
-    // debugger
+    // 
     itemImage.src = tileData.image_url
 }
 
 function renderDealOfTheDayItem(tileData){
-    // debugger
+    // 
     const banner = document.querySelector('#banner')
     // console.log(banner)
     let content = banner.querySelector('.content')
     // console.log(content)
     let header = content.querySelector('header')
+    header.style.cursor = "pointer"
 
     let itemTitle = header.querySelector('h2')
+    
     itemTitle.innerText = tileData.name
 
     let itemPrice = content.querySelector('h3')
@@ -517,8 +737,6 @@ function renderDealOfTheDayItem(tileData){
         renderItemPage(tileData)
     })
     
-
-    // debugger
 }
     
 function clearItemList(){
@@ -573,9 +791,9 @@ function clearPage(){
     // }
     
     // function downVote(likes){
-    //     // debugger
+    //     // 
     //     const newLikes = likes - 1
-    //     // debugger
+    //     // 
     //     // let likesText = `${likes} likes`
     //     fetch('http://localhost:3000/images/1', {
     //         method: 'PATCH',
@@ -592,7 +810,7 @@ function clearPage(){
     // }
     
     // function renderComments(data){
-    //     // debugger
+    //     // 
     //     const commentParent = document.querySelector('.comments')
     //     removeAllChildNodes(commentParent)
     //     console.log(data.comments)
@@ -606,7 +824,7 @@ function clearPage(){
     //     if (data) {
     //         const commentFormInput = document.querySelector('.comment-input')
     //         const newComment = document.createElement('li')
-    //         // debugger
+    //         // 
     //         newComment.dataset.commentId = data.id
     //         newComment.innerText = data.content
     //         commentFormInput.value = ""
@@ -619,7 +837,7 @@ function clearPage(){
     //         deleteCommentButton.addEventListener('click', function(event){
     //             deleteComment(event.target.parentElement)
     //             // console.log(event.target.parentElement)
-    //             // debugger
+    //             // 
     //         })
     
     //         commentParent.appendChild(newComment)
@@ -638,7 +856,7 @@ function clearPage(){
     //         deleteCommentButton.addEventListener('click', function(event){
     //             deleteComment(event.target.parentElement)
     //             // console.log(event.target.parentElement)
-    //             // debugger
+    //             // 
     //         })
     
     //         commentParent.appendChild(newComment)
@@ -667,9 +885,9 @@ function clearPage(){
     
     
     // function incrementLikes(likes){
-    //     // debugger
+    //     // 
     //     const newLikes = likes + 1
-    //     // debugger
+    //     // 
     //     // let likesText = `${likes} likes`
     //     fetch('http://localhost:3000/images/1', {
     //         method: 'PATCH',
@@ -684,8 +902,7 @@ function clearPage(){
     //     let likesText = `${newLikes} likes`
     //     return likesText
 // }
-    
-    
+
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
