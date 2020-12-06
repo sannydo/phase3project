@@ -44,10 +44,73 @@
 									<!-- <a href="#menu" class="box-shadow-menu">
 									</a> -->
 								</header>
-							<div id="hidden-storage">
-								<p></p>
+							
+							<div id="login-target" style="display: none;">
+								<div id="login-target" style="display: block;">
+									<div style="margin-bottom: 7em;">
+									</div>
+									<h1 class="login-text">Login</h1><br>
+									<div style="display: none;" id="error-message-div">
+										<p style="color: red;" >Sorry, it looks like either your Password or your Username are incorrect</p>
+									</div>
+									<div style="display: block;">
+										<form method="post" action="#">
+											<div class="col-6 col-12-xsmall" style="margin: 0px 40em 0px 0px;">
+												<input id="login-username-input" type="text" name="username-input" placeholder="Username">
+											</div><br>
+											<div class="col-6 col-12-xsmall" style="margin: 0px 40em 0px 0px;">
+												<input id="login-pasword-input" type="password" name="password-input" placeholder="Password">
+											</div><br><div class="col-12">
+												<input type="submit" value="Login" class="primary" id="login-submit-button">
+												<button style="margin-left: 1em;" id="login-screen-sign-up">Sign Up</button>
+											</div>
+										</form>
+							</div></div><br><br><br><br><br><br><br><br>
 							</div>
-							<div id="login-target"></div>
+							<div id="sign-up-target" style="display: none;">
+								<div id="sign-up-target"><div style="margin-bottom: 7em;"></div><h1 class="signup-text">Sign-Up</h1><br><div style="display: block;"><form method="post" action="#">
+										
+									<div style="margin: 0px 40em 0px 0px;">
+										<input id="name-input" type="text" name="name-input" placeholder="Name">
+									</div><br>
+									<div style="margin: 0px 40em 0px 0px;">
+										<input id="sign-up-username-input" type="text" name="new-username-input" placeholder="Username">
+									</div><br>
+									<div style="margin: 0px 40em 0px 0px;">
+										<input id="sign-up-password-input" type="password" name="password-input" placeholder="Password">
+									</div><br>
+									<div style="margin: 0px 40em 0px 0px;">
+										<select id="size-input" name="size-input">
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+										</select>
+									</div><br>
+									<div style="margin: 0px 40em 0px 0px;">
+										<select id="width-input" name="width-input">
+											<option value="AAA">AAA</option>
+											<option value="AA">AA</option>
+											<option value="A">A</option>
+											<option value="B">B</option>
+											<option value="C">C</option>
+											<option value="D">D</option>
+											<option value="E">E</option>
+											<option value="EE">EE</option>
+											<option value="EEE">EEE</option>
+										</select>
+									</div><br><br>
+									<div class="col-12">
+										<input type="submit" value="Sign Up" class="primary" id="sign-up-submit-button">
+										<button style="margin-left: 1em;" id="sign-up-screen-login">Login</button>
+									</div>
+								</form></div><br><br><br><br><br><br><br><br>
+							</div>
+							</div>
 							<div id="main-body">
 							<!-- Banner -->
 								<section id="banner">
@@ -57,9 +120,9 @@
 											<h2></h2>
 											<!-- <h3>A free and fully responsive site template</h3> -->
 										</header>
-										<h3>A free and fully responsive site template</h3>
+										<h3></h3>
 										<h4 id="item-stock-display"></h4>
-										<p id="item-description">Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
+										<!-- <p id="item-description">Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p> -->
 										
 										<ul class="actions">
 											<li><a href="#" class="button big">Learn More</a></li>
@@ -113,14 +176,14 @@
 										<h2>Product List</h2>
 									</header>
 									<div class="posts">
-										<article>
+										<!-- <article>
 											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
 											<h3>Product example Title</h3>
 											<p>Price</p>
 											<ul class="actions">
 												<li><a href="#" class="button">Add To Cart</a></li>
 											</ul>
-										</article>
+										</article> -->
 										
 									</div>
 								</section>
@@ -182,10 +245,10 @@
 										<h2>Your Cart</h2>
 									</header>
 									<div class="mini-posts">
-										<article>
+										<!-- <article>
 											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
 											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
+										</article> -->
 										<!-- <article>
 											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
 											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
@@ -199,7 +262,8 @@
 										
 										<li><a href="#" class="button">More</a></li>
 									</ul>
-									<h3 id="cart-total">Total: </h3>
+									<h3 style="display: flex;">Total: </h3>
+									<h4 id="cart-total" style="display: flex;">$0</h4>
 								</section>
 
 							<!-- Section -->

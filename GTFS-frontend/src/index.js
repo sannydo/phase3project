@@ -3,122 +3,37 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(resource => resource.json())
     .then((data) => {
 
-        // renderLoginScreen()
-
         addTilesToPage(data)
         renderDealOfTheDay(data)
-        // renderLoginScreen()
 
         renderHeader()
+        renderLoginScreen()
+        renderSignUpScreen()
     })
 });
 
 function renderLoginScreen(){
-    // clearPage()
-    toggleShowPage()
-    // hideIncorrectPasswordMessage()
-    // const banner = document.querySelector('#banner')
-    // const innerDiv = banner.parentElement
-    const loginTargetDiv = document.querySelector('#login-target')
-    loginTargetDiv.style.display = "block"
+    const errorMessageDiv = document.querySelector('#error-message-div')
 
-    const loginText = document.createElement('h1')
-    loginText.innerText = "Login"
-    loginText.className = "login-text"
-    // loginText.style.display = "block"
-    // loginText.style.margin = "auto"
+    const usernameInput = document.querySelector('#login-username-input')
 
-    const spacer = document.createElement('div')
-    spacer.style.marginBottom = "7em"
-    loginTargetDiv.appendChild(spacer)
+    const passwordInput = document.querySelector('#login-pasword-input')
 
-    const lineBreak = document.createElement('br')
-    const lineBreak2 = document.createElement('br')
-    const lineBreak3 = document.createElement('br')
-    const lineBreak4 = document.createElement('br')
-    // lineBreak4.style.marginBottom = "20px"
-    const lineBreak5 = document.createElement('br')
-    const lineBreak6 = document.createElement('br')
+    const signUpButton = document.querySelector('#login-screen-sign-up')
 
-    const errorMessageDiv = document.createElement('div')
-    const errorMessage = document.createElement('p')
-    errorMessage.innerText = "Sorry, it looks like either your Password or your Username are incorrect"
-    errorMessage.style.color = "red"
-    
-    errorMessageDiv.style.display = "none"
-    errorMessageDiv.appendChild(errorMessage)
+    signUpButton.addEventListener('click', function(event){
+        event.preventDefault()
+        toggleHideLoginScreen()
+        toggleHideSignUpScreen()
+        hidePage()
+        hideHeaderButtons()
+    })
 
-    const loginFormDiv = document.createElement('div')
-    loginFormDiv.style.display = "block"
-
-    const loginForm = document.querySelector('form')
-    loginForm.method = "post"
-    const defaultField = loginForm.querySelector('#query')
-    loginForm.removeChild(defaultField)
-
-    const usernameInputDiv = document.createElement('div')
-    usernameInputDiv.className = "col-6 col-12-xsmall"
-    usernameInputDiv.style.margin = "0 40em 0 0"
-
-    const usernameInput = document.createElement('input')
-    usernameInput.id = "username-input"
-    usernameInput.type = "text"
-    usernameInput.name = "username-input"
-    usernameInput.placeholder = "Username"
-
-    const passwordInputDiv = document.createElement('div')
-    passwordInputDiv.className = "col-6 col-12-xsmall"
-    passwordInputDiv.style.margin = "0 40em 0 0"
-
-    const passwordInput = document.createElement('input')
-    passwordInput.id = "pasword-input"
-    passwordInput.type = "password"
-    passwordInput.name = "password-input"
-    passwordInput.placeholder = "Password"
-
-    const actionsDiv = document.createElement('div')
-    actionsDiv.className = "col-12"
-    // const actionsUl = document.createElement('ul')
-
-    // const actionLi1 = document.createElement('li')
-    const submitButton = document.createElement('input')
-    submitButton.type = "submit"
-    submitButton.value = "Login"
-    submitButton.className = "primary"
-
-    // const actionLi2 = document.createElement('li')
-    const signUpButton = document.createElement('button')
-    signUpButton.innerText = "Sign Up"
-    signUpButton.style.marginLeft = "1em"
-
-    loginForm.appendChild(usernameInputDiv)
-    usernameInputDiv.appendChild(usernameInput)
-    loginForm.appendChild(lineBreak2)
-    loginForm.appendChild(passwordInputDiv)
-    passwordInputDiv.appendChild(passwordInput)
-
-    // actionLi1.appendChild(submitButton)
-    // actionLi2.appendChild(signUpButton)
-    // actionsUl.appendChild(actionLi1)
-    // actionsUl.appendChild(actionLi2)
-
-    actionsDiv.appendChild(submitButton)
-    actionsDiv.appendChild(signUpButton)
-    loginForm.appendChild(lineBreak3)
-    loginForm.appendChild(actionsDiv)
-
-    loginTargetDiv.appendChild(loginText)
-    loginTargetDiv.appendChild(lineBreak)
-    loginTargetDiv.appendChild(errorMessageDiv)
-    loginTargetDiv.appendChild(loginFormDiv)
-    loginTargetDiv.appendChild(lineBreak4)
-    loginTargetDiv.appendChild(lineBreak5)
-    loginTargetDiv.appendChild(lineBreak6)
-    loginFormDiv.appendChild(loginForm)
-    // debugger
     function hideIncorrectPasswordMessage(){
         errorMessageDiv.style.display = "none"
     }    
+
+    const submitButton = document.querySelector('#login-submit-button')
 
     submitButton.addEventListener('click', function(event){
         event.preventDefault()
@@ -129,7 +44,7 @@ function renderLoginScreen(){
         .then((data) => {
             data.forEach(function(user){
                 if (user.username === usernameInput.value && user.password === passwordInput.value){
-                    toggleShowPage()
+                    showPage()
                     toggleHideLoginScreen()
                     hideIncorrectPasswordMessage()
                 } else {
@@ -141,178 +56,99 @@ function renderLoginScreen(){
     })
 }
 
-
 function toggleHideLoginScreen(){
     // debugger
+
     const loginTargetDiv = document.querySelector('#login-target')
     if (loginTargetDiv.style.display === "none") {
         loginTargetDiv.style.display = "block";
+
+        hidePage()
+        hideHeaderButtons()
     } else {
+        showPage()
+        showHeaderButtons()
         loginTargetDiv.style.display = "none";
     }
 }
 
-function renderSignUpScreen(){
-    // clearPage()
-    toggleShowPage()
-    // const banner = document.querySelector('#banner')
-    // const innerDiv = banner.parentElement
-    const signupTargetDiv = document.querySelector('#login-target')
-
-    const signupText = document.createElement('h1')
-    signupText.innerText = "Sign-Up"
-    signupText.className = "signup-text"
-    // loginText.style.display = "block"
-    // loginText.style.margin = "auto"
-
-    const spacer = document.createElement('div')
-    spacer.style.marginBottom = "7em"
-    loginTargetDiv.appendChild(spacer)
-
-    const lineBreak = document.createElement('br')
-    const lineBreak2 = document.createElement('br')
-    const lineBreak3 = document.createElement('br')
-    const lineBreak4 = document.createElement('br')
-    // lineBreak4.style.marginBottom = "20px"
-    const lineBreak5 = document.createElement('br')
-    const lineBreak6 = document.createElement('br')
-
-    // Errors -- come back
-    // const errorMessageDiv = document.createElement('div')
-    // const errorMessage = document.createElement('p')
-    // errorMessage.innerText = "Sorry, it looks like either your Password or your Username are incorrect"
-    // errorMessage.style.color = "red"
-    // errorMessageDiv.style.display = "none"
-    // errorMessageDiv.appendChild(errorMessage)
-
-    const signupFormDiv = document.createElement('div')
-    signupFormDiv.style.display = "block"
-
-    const signupForm = document.querySelector('form')
-    signupForm.method = "post"
-    const defaultField = signupForm.querySelector('#query')
-    signupForm.removeChild(defaultField)
-    // name 
-    const nameInputDiv = document.createElement('div')
-    nameInputDiv.className = "col-6 col-12-xsmall"
-    nameInputDiv.style.margin = "0 40em 0 0"
-
-    const nameInput = document.createElement('input')
-    nameInput.id = "name-input"
-    nameInput.type = "text"
-    nameInput.name = "name-input"
-    nameInput.placeholder = "Name"
-    // username 
-
-    const newuserNameDiv = document.createElement('div')
-    newuserNameDiv.className = "col-6 col-12-xsmall"
-    newuserNameDiv.style.margin = "0 40em 0 0"
-
-    const newuserNameInput = document.createElement('input')
-    newuserNameInput.id = "new-username-input"
-    newuserNameInput.type = "text"
-    newuserNameInput.name = "new-username-input"
-    newuserNameInput.placeholder = "Username"
-
-    // password with confirm
-    const passwordInputDiv = document.createElement('div')
-    passwordInputDiv.className = "col-6 col-12-xsmall"
-    passwordInputDiv.style.margin = "0 40em 0 0"
-
-    const passwordInput = document.createElement('input')
-    passwordInput.id = "password-input"
-    passwordInput.type = "password"
-    passwordInput.name = "password-input"
-    passwordInput.placeholder = "Password"
-    
-    // confirmPassword
-
-    const confirmInputDiv = document.createElement('div')
-    confirmInputDiv.className = "col-6 col-12-xsmall"
-    confirmInputDiv.style.margin = "0 40em 0 0"
-
-    const confirmInput = document.createElement('input')
-    confirmInput.id = "confirm-input"
-    confirmInput.type = "password"
-    confirmInput.name = "confirm-input"
-    confirmInput.placeholder = "Confirm Password"
-
-    // Shoe Size
-
-    const sizeInputDiv = document.createElement('div')
-    sizeInputDiv.className = "col-6 col-12-xsmall"
-    sizeInputDiv.style.margin = "0 40em 0 0"
-
-    const sizeInput = document.createElement('input')
-    sizeInput.id = "size-input"
-    sizeInput.type = "number"
-    sizeInput.name = "size-input"
-    sizeInput.min = "7"
-    sizeInput.max = "14"
-    sizeInput.placeholder = "Size (between 7-14)"
-
-    
-
-    const actionsDiv = document.createElement('div')
-    actionsDiv.className = "col-12"
-    // const actionsUl = document.createElement('ul')
-
-    // const actionLi1 = document.createElement('li')
-    const submitButton = document.createElement('input')
-    submitButton.type = "submit"
-    submitButton.value = "Login"
-    submitButton.className = "primary"
-
-    // const actionLi2 = document.createElement('li')
-    const signUpButton = document.createElement('button')
-    signUpButton.innerText = "Sign Up"
-    signUpButton.style.marginLeft = "1em"
-
-    // put form together
-    loginForm.appendChild(usernameInputDiv)
-    usernameInputDiv.appendChild(usernameInput)
-    loginForm.appendChild(lineBreak2)
-    loginForm.appendChild(passwordInputDiv)
-    passwordInputDiv.appendChild(passwordInput)
-
-    actionsDiv.appendChild(submitButton)
-    actionsDiv.appendChild(signUpButton)
-    loginForm.appendChild(lineBreak3)
-    loginForm.appendChild(actionsDiv)
-
-    loginTargetDiv.appendChild(loginText)
-    loginTargetDiv.appendChild(lineBreak)
-    loginTargetDiv.appendChild(errorMessageDiv)
-    loginTargetDiv.appendChild(loginFormDiv)
-    loginTargetDiv.appendChild(lineBreak4)
-    loginTargetDiv.appendChild(lineBreak5)
-    loginTargetDiv.appendChild(lineBreak6)
-    loginFormDiv.appendChild(loginForm)
+function toggleHideSignUpScreen(){
     // debugger
-    function hideIncorrectPasswordMessage(){
-        errorMessageDiv.style.display = "none"
-    }    
+    const loginTargetDiv = document.querySelector('#sign-up-target')
+    if (loginTargetDiv.style.display === "none") {
+        loginTargetDiv.style.display = "block";
+
+        hidePage()
+        hideHeaderButtons()
+    } else {
+        showPage()
+        showHeaderButtons()
+        loginTargetDiv.style.display = "none";
+    }
+}
+
+function showHeaderButtons(){
+    const headerSignUpButton = document.querySelector('.sign-up')
+    headerSignUpButton.style.display = "inline-block"
+
+    const headerLoginButton = document.querySelector('.log-in')
+    headerLoginButton.style.display = "inline-block"
+}
+
+function hideHeaderButtons(){
+    const headerSignUpButton = document.querySelector('.sign-up')
+    headerSignUpButton.style.display = "none"
+
+    const headerLoginButton = document.querySelector('.log-in')
+    headerLoginButton.style.display = "none"
+}
+
+function renderSignUpScreen(){
+    const nameInput = document.querySelector('#name-input')
+
+    const usernameInput = document.querySelector('#sign-up-username-input')
+
+    const passwordInput = document.querySelector('#sign-up-password-input')
+
+    const sizeInput = document.querySelector('#size-input')
+
+    const widthInput = document.querySelector('#width-input')
+
+    const submitButton = document.querySelector('#sign-up-submit-button')
+
+    const loginButton = document.querySelector('#sign-up-screen-login')
+    loginButton.addEventListener('click', function(event){
+        event.preventDefault()
+        toggleHideLoginScreen()
+        toggleHideSignUpScreen()
+        hidePage()
+        hideHeaderButtons()
+    })
 
     submitButton.addEventListener('click', function(event){
         event.preventDefault()
         // usernameInput.value
         // passwordInput.value
-        fetch('http://localhost:3000/users')
+        fetch('http://localhost:3000/users', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify({
+                "name": `${nameInput.value}`,
+                "username": `${usernameInput.value}`,
+                "password": `${passwordInput.value}`,
+                "shoe_size": `${sizeInput.value}`,
+                "shoe_width": `${widthInput.value}`,
+            })
+        })
         .then(response => response.json())
         .then((data) => {
-            data.forEach(function(user){
-                if (user.username === usernameInput.value && user.password === passwordInput.value){
-                    // debugger
-                    // setCurrentUser(user)
-                    toggleShowPage()
-                    toggleHideLoginScreen()
-                    hideIncorrectPasswordMessage()
-                    // console.log(user)
-                } else {
-                    //incorrect username or password message
-                    errorMessageDiv.style.display = "block"
-                }
-            })
+            console.log(data)
+            showPage()
+            // toggleHideLoginScreen()
+            toggleHideSignUpScreen()
         })
     })
 }
@@ -325,43 +161,56 @@ function renderSignUpScreen(){
 //     currentUserP.innerText = `${user}`
 // }
 
-function toggleShowPage(){
-    // debugger
+// function toggleShowPage(){
+//     // debugger
+//     const parentElement = document.querySelector('#main-body')
+//     // parentElement.style.display = "none"
+//     if (parentElement.style.display === "none") {
+//         parentElement.style.display = "block";
+//       } else {
+//         parentElement.style.display = "none";
+//       }
+// }
+
+function showPage(){
     const parentElement = document.querySelector('#main-body')
-    // parentElement.style.display = "none"
-    if (parentElement.style.display === "none") {
-        parentElement.style.display = "block";
-      } else {
-        parentElement.style.display = "none";
-      }
+    parentElement.style.display = "block"
+}
+
+function hidePage(){
+    const parentElement = document.querySelector('#main-body')
+    parentElement.style.display = "none"
 }
 
 function renderDealOfTheDay(tiles){
+    let highestStock = 400
     tiles.forEach(function(tileData){
-        let highestStock = 5000
-        if (tileData.stock == highestStock){
+        if (tileData.stock > highestStock){
             highestStock = tileData.stock
-            renderDealOfTheDayItem(tileData)
         }
     })
+    function isHighestStock(tileData){
+        return tileData.stock === highestStock
+    }
+    renderDealOfTheDayItem(tiles.find(isHighestStock))
 }
 
 function addTilesToPage(tiles){
     const shoeTileParent = document.querySelector(".posts")
     console.log(tiles)
     tiles.forEach(function renderTile(tileData){
-        console.log(tileData)
+        // console.log(tileData)
         const shoeTile = document.createElement('article')
 
         const shoeName = document.createElement('h3')
         shoeName.innerText = `${tileData.name}`
 
         const shoePrice = document.createElement('p')
-        shoePrice.innerText = `${tileData.price}`
+        shoePrice.innerText = `$${tileData.price}`
         const addToCartButton = document.createElement('button')
         addToCartButton.innerText = "Add To Cart"
         addToCartButton.addEventListener('click', function(event){
-            console.log(event.target)
+            // console.log(event.target)
             const cartItem = document.createElement('article')
             const cartItemImageFrame = document.createElement('a')
             cartItemImageFrame.className = "image"
@@ -373,7 +222,7 @@ function addTilesToPage(tiles){
             cartItemName.innerText = tileData.name
 
             const cartItemPrice = document.createElement('p')
-            cartItemPrice.innerText = tileData.price
+            cartItemPrice.innerText = `$${tileData.price}`
             cartItemPrice.style.color = "green"
             cartItemPrice.style.fontSize = "1.8em"
 
@@ -385,6 +234,7 @@ function addTilesToPage(tiles){
             const cart = document.querySelector('.mini-posts')
             
             cart.appendChild(cartItem)
+            renderSideBar(tileData.price)
         })
 
         const shoeImage = document.createElement('img')
@@ -393,7 +243,7 @@ function addTilesToPage(tiles){
 
         shoeName.addEventListener('click', function(event){
                 //Sanny
-            console.log(event.target)
+            // console.log(event.target)
             clearItemList()
             renderItemPage(tileData)//event.target.item
         })
@@ -408,51 +258,6 @@ function addTilesToPage(tiles){
     })
 }
 
-// function renderItemToCart(tileData){
-//     const cartItem = document.createElement('article')
-//     const cartItemImageFrame = document.createElement('a')
-//     cartItemImageFrame.className = "image"
-
-//     const cartItemImage = document.createElement('img')
-//     cartItemImage.src = tileData.image_url
-
-//     const cartItemName = document.createElement('h4')
-//     cartItemName.innerText = tileData.name
-
-//     const cartItemPrice = document.createElement('p')
-//     cartItemPrice.innerText = tileData.price
-//     cartItemPrice.style.color = "green"
-//     cartItemPrice.style.fontSize = "1.8em"
-
-//     cartItemImageFrame.appendChild(cartItemImage)
-//     cartItem.appendChild(cartItemImageFrame)
-//     cartItem.appendChild(cartItemName)
-//     cartItem.appendChild(cartItemPrice)
-
-//     const cart = document.querySelector('.mini-posts')
-            
-//     cart.appendChild(cartItem)
-// }
-
-// function renderYourCartButton(){
-//     const pageHeader = document.querySelector('#header')
-//     let yourCartButton = pageHeader.querySelector('button')
-//     yourCartButton.className = "primary"
-//     // debugger
-//     yourCartButton.addEventListener('click', function(event){
-//         // toggleShowPage()
-//         // renderCart()
-//         // debugger
-//         //open hamburger menu to see your cart
-//         console.log(event.target)
-//     })
-// }
-
-// function renderCart(){
-//     const currentUser = document.querySelector('#hidden-storage')
-//     debugger
-// }
-
 function toggleHideSidebar(){
     const sideBar = document.querySelector('#sidebar')
     // sideBar.firstElementChild.style.display = "none"
@@ -464,7 +269,7 @@ function toggleHideSidebar(){
         // // // debugger
         newMenuHamburger.style.display = "block"
         newMenuHamburger.addEventListener('click', function(event){
-            console.log(event.target)
+            // console.log(event.target)
             toggleHideSidebar()
         })
     } else {
@@ -493,25 +298,29 @@ function renderHeader(){
     // renderYourCartButton()
     const shadowMenuHamburger = document.querySelector('#main').firstElementChild
     shadowMenuHamburger.addEventListener('click', function(event){
-        console.log(event)
+        // console.log(event)
         toggleHideSidebar()
     })
 
     const signUpButton = iconsUl.querySelector('.sign-up')
+    signUpButton.style.cursor = "pointer"
     signUpButton.addEventListener('click', function(event){
+        console.log(event.target)
         // renderSignUpScreen()
+        toggleHideSignUpScreen()
     })
     
     const loginButton = iconsUl.querySelector('.log-in')
-    // debugger
+    loginButton.style.cursor = "pointer"
     loginButton.addEventListener('click', function(event){
         // console.log(event.target)
-        renderLoginScreen()
+        // renderLoginScreen()
+        toggleHideLoginScreen()
     })
     renderSideBar()
 }
 
-function renderSideBar(){
+function renderSideBar(addSum = 0){
     const yourCartDiv = document.querySelector('.mini-posts').parentElement
     const checkoutButton = yourCartDiv.querySelector('.actions').lastElementChild.firstElementChild
     checkoutButton.innerText = "Checkout Items"
@@ -520,14 +329,20 @@ function renderSideBar(){
         event.preventDefault()
         const miniPostsDiv = document.querySelector('.mini-posts')
         removeAllChildNodes(miniPostsDiv)
+        const cartTotal = document.querySelector('#cart-total')
+        cartTotal.innerText = "$0"
     })
+    let totalCalc = document.querySelector('#cart-total')
+    let initialInt = totalCalc.innerText.split("$")[1]
+    let prevTotal = parseInt(initialInt)
+    let currentTotal = `$${prevTotal + parseInt(addSum)}`
+    totalCalc.innerText = currentTotal
+    totalCalc.style.color = "green"
 }
-
-
 
 function renderItemPage(tileData){
     const banner = document.querySelector('#banner')
-    console.log(banner)
+    // console.log(banner)
     let content = banner.querySelector('.content')
     // console.log(content)
     let header = content.querySelector('header')
@@ -539,27 +354,63 @@ function renderItemPage(tileData){
     secondaryItemTitle.innerHTML = null
 
     let itemPrice = content.querySelector('h3')
-    itemPrice.innerText = `${tileData.price}`
+    itemPrice.innerText = `$${tileData.price}`
 
-    let itemDescription = content.querySelector('#item-description')
-    itemDescription.innerText = `${tileData.description}`
+    // let itemDescription = content.querySelector('#item-description')
+    // itemDescription.innerText = `${tileData.description}`
 
     let buttonParentUl = content.querySelector('ul')
 
-    let addToCartButton = buttonParentUl.querySelector('a')
+    let oldAddToCartButton = buttonParentUl.querySelector('a')
+    oldAddToCartButton.style.display = "none"
+
+    let addToCartButton = document.createElement('button')
     addToCartButton.innerText = "Add To Cart"
+    addToCartButton.addEventListener('click', function(event){
+        // console.log(event)
+        event.preventDefault()
+        const cartItem = document.createElement('article')
+        const cartItemImageFrame = document.createElement('a')
+        cartItemImageFrame.className = "image"
+    
+        const cartItemImage = document.createElement('img')
+        cartItemImage.src = tileData.image_url
+    
+        const cartItemName = document.createElement('h4')
+        cartItemName.innerText = tileData.name
+    
+        const cartItemPrice = document.createElement('p')
+        cartItemPrice.innerText = `$${tileData.price}`
+        cartItemPrice.style.color = "green"
+        cartItemPrice.style.fontSize = "1.8em"
+    
+        cartItemImageFrame.appendChild(cartItemImage)
+        cartItem.appendChild(cartItemImageFrame)
+        cartItem.appendChild(cartItemName)
+        cartItem.appendChild(cartItemPrice)
+    
+        const cart = document.querySelector('.mini-posts')
+                
+        cart.appendChild(cartItem)
+        renderSideBar(tileData.price)
+    })
+    buttonParentUl.appendChild(addToCartButton)
+
+    // debugger
 
     let itemStockDisplay = content.querySelector('#item-stock-display')
     itemStockDisplay.innerText = `Remaining Stock: ${tileData.stock}`
 
     let imageObject = banner.querySelector('span')
     let itemImage = imageObject.firstElementChild
+    // debugger
     itemImage.src = tileData.image_url
 }
 
 function renderDealOfTheDayItem(tileData){
+    // debugger
     const banner = document.querySelector('#banner')
-    console.log(banner)
+    // console.log(banner)
     let content = banner.querySelector('.content')
     // console.log(content)
     let header = content.querySelector('header')
@@ -568,10 +419,15 @@ function renderDealOfTheDayItem(tileData){
     itemTitle.innerText = tileData.name
 
     let itemPrice = content.querySelector('h3')
-    itemPrice.innerText = `${tileData.price}`
+    itemPrice.innerText = `$${tileData.price}`
 
-    let itemDescription = content.querySelector('#item-description')
-    itemDescription.innerText = `${tileData.description}`
+    let imageObject = banner.querySelector('span')
+    let itemImage = imageObject.firstElementChild
+    console.log(tileData)
+    itemImage.src = tileData.image_url
+
+    // let itemDescription = content.querySelector('#item-description')
+    // itemDescription.innerText = `${tileData.description}`
 
     let buttonParentUl = content.querySelector('ul')
 
@@ -591,7 +447,7 @@ function renderDealOfTheDayItem(tileData){
         cartItemName.innerText = tileData.name
     
         const cartItemPrice = document.createElement('p')
-        cartItemPrice.innerText = tileData.price
+        cartItemPrice.innerText = `$${tileData.price}`
         cartItemPrice.style.color = "green"
         cartItemPrice.style.fontSize = "1.8em"
     
@@ -603,7 +459,7 @@ function renderDealOfTheDayItem(tileData){
         const cart = document.querySelector('.mini-posts')
                 
         cart.appendChild(cartItem)
-
+        renderSideBar(tileData.price)
     })
 
     let itemStockDisplay = content.querySelector('#item-stock-display')
@@ -614,14 +470,12 @@ function renderDealOfTheDayItem(tileData){
         renderItemPage(tileData)
     })
     
-    let imageObject = banner.querySelector('span')
-    let itemImage = imageObject.firstElementChild
-    itemImage.src = tileData.image_url
+
     // debugger
 }
     
 function clearItemList(){
-    console.log("You made it")
+    // console.log("You made it")
     
     // removeAllChildNodes(banner)
     const productList = document.querySelector('#product-list')
@@ -634,11 +488,12 @@ function clearPage(){
     const banner = document.querySelector('#banner')
     removeAllChildNodes(banner)
 }
-    // function addPictureToPage(data) {
-    //     // const imageCard = document.querySelector('.image-card')
-    //     const pictureTitle = document.querySelector('.title')
-    //     pictureTitle.innerText = data.title
-    //     // dogNameItem.dataset.dogId = dog.id
+
+// function addPictureToPage(data) {
+//     // const imageCard = document.querySelector('.image-card')
+//     const pictureTitle = document.querySelector('.title')
+//     pictureTitle.innerText = data.title
+//     // dogNameItem.dataset.dogId = dog.id
     //     const dataImage = document.querySelector('.image')
     //     dataImage.src = data.image
     
@@ -781,14 +636,14 @@ function clearPage(){
     //     })
     //     let likesText = `${newLikes} likes`
     //     return likesText
-    // }
+// }
     
     
-    function removeAllChildNodes(parent) {
-        while (parent.firstChild) {
-            parent.removeChild(parent.firstChild);
-        }
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
     }
+}
     
     // function deleteComment(commentLI){
     //     fetch(`http://localhost:3000/comments/${commentLI.dataset.commentId}`, {
