@@ -120,7 +120,12 @@
 								</div><br><br><br><br><br><br><br><br>
 							</div>
 							<div id="sign-up-target" style="display: none;">
-								<div id="sign-up-target"><div style="margin-bottom: 7em;"></div><h1 class="signup-text">Sign-Up</h1><br><div style="display: block;"><form method="post" action="#">
+								<div id="sign-up-target">
+									<div style="margin-bottom: 7em;">
+									</div>
+									<h1 class="signup-text">Sign-Up</h1><br>
+									<div style="display: block;">
+									<form method="POST" action="#">
 										
 									<div style="margin: 0px 40em 0px 0px;">
 										<input id="name-input" type="text" name="name-input" placeholder="Name">
@@ -184,7 +189,27 @@
 										<img src="images/pic10.jpg" alt="" />
 									</span>
 								</section>
-
+								<section>
+									<div id="item-comments-div" style="display: none;">
+										<br><br>
+										<header>
+											<h2 id="item-comments-header">Reviews</h2>
+										</header>
+										<div class="features">
+											<article>
+												<span class="icon solid fa-paper-plane"></span>
+												<div class="content">
+													<h3>Example Username</h3>
+													<p>Example review content. This is a review of a shoe. Not only that, it is an example.</p>
+												</div>
+											</article>
+										</div>
+										<form method="POST" action="#">
+											<input id="comment-content-input" type="text" name="comment-content-input" placeholder="Leave a Review"><br>
+											<input type="submit" value="Post" class="primary" id="submit-review-button">
+										</form>
+									</div>
+								</section>
 							<!-- Section
 								<section>
 									<header class="major">
@@ -251,7 +276,7 @@
 
 							<!-- Search -->
 								<section id="search" class="alt">
-									<form method="post" action="#">
+									<form>
 										<input type="text" name="query" id="query" placeholder="Search" />
 									</form>
 								</section>
@@ -333,7 +358,7 @@
 									<header class="major">
 										<h2>Get in touch</h2>
 									</header>
-									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									<p>We're a small business, run by just two rookie software engineers, but that means we have a much more personal touch. That can be felt strongest in our customer service, we're here for you day and night, if there's something worng please let us know and we'll fix it right away!</p>
 									<ul class="contact">
 										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
 										<li class="icon solid fa-phone">(000) 000-0000</li>

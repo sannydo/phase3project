@@ -254,6 +254,7 @@ function addTilesToPage(tiles){
 
         const shoeName = document.createElement('h3')
         shoeName.innerText = `${tileData.name}`
+        shoeName.style.cursor = "pointer"
 
         const shoePrice = document.createElement('p')
         shoePrice.innerText = `$${tileData.price}`
@@ -291,6 +292,13 @@ function addTilesToPage(tiles){
         const shoeImage = document.createElement('img')
         shoeImage.className = "tile-image"
         shoeImage.src = `${tileData.image_url}`
+        shoeImage.style.cursor = "pointer"
+        shoeImage.addEventListener('mouseover', () => {
+            shoeImage.src = tileData.alt_img
+        })
+        shoeImage.addEventListener('mouseout', () => {
+            shoeImage.src = tileData.image_url
+        })
 
         shoeName.addEventListener('click', function(event){
                 //Sanny
@@ -426,6 +434,26 @@ function showThankYouPage(){
 }
 
 function renderSideBar(addSum = 0){
+    const searchBar = document.querySelector('#search').firstElementChild.firstElementChild
+    searchBar.addEventListener('keyup', function(event){
+        event.preventDefault()
+        fetch('http://localhost:3000/shoes')
+        .then(resource => resource.json())
+        .then((data) => {
+            let newData = [0]
+            data.forEach(function(shoe){
+                if (shoe.name.includes(`${searchBar.value}`)){
+                    newData.push(shoe)
+                }
+            })
+            newData = newData.slice(1)
+            // debugger
+            clearItemTiles()
+            addTilesToPage(newData)
+            renderDealOfTheDay(newData)
+        })
+    })
+
     const yourCartDiv = document.querySelector('.mini-posts').parentElement
     const checkoutButton = yourCartDiv.querySelector('.actions').lastElementChild.firstElementChild
     checkoutButton.innerText = "Checkout Items"
@@ -727,6 +755,109 @@ function renderItemPage(tileData){
     let itemImage = imageObject.firstElementChild
     // 
     itemImage.src = tileData.image_url
+    itemImage.addEventListener('mouseover', () => {
+        itemImage.src = tileData.alt_img
+    })
+    itemImage.addEventListener('mouseout', () => {
+        itemImage.src = tileData.image_url
+    })
+
+    const commentDiv = document.querySelector('#item-comments-div')
+    // commentDiv.style.display = "block"
+    toggleShowComments(commentDiv)
+    // const commentsHeader = commentDiv.querySelector('header').firstElementChild
+    // commentsHeader.style.bottomBorder = "solid 3px #f56a6a"
+    const commentList = commentDiv.querySelector('.features')
+
+    tileData.comments.forEach(function(comment){
+        const commentArticle = document.createElement('article')
+        commentArticle.dataset.commentId = comment.id
+
+        commentList.appendChild(commentArticle)
+    
+        const paperPlane = document.createElement('span')
+        paperPlane.className = "icon solid fa-paper-plane"
+        commentArticle.appendChild(paperPlane)
+    
+        const commentContentDiv = document.createElement('div')
+        // commentArticle.appendChild(commentContentDiv)
+    
+        const commenterUsername = document.createElement('h3')
+        // commenterUsername.innerText = `${comment.user_id}`
+        fetch(`http://localhost:3000/users/${comment.user_id}`)
+        .then(resource => resource.json())
+        .then((user) => {
+            commenterUsername.innerText = `${user.username}`
+        })
+        commentContentDiv.appendChild(commenterUsername)
+
+        const commentContent = document.createElement('p')
+        commentContent.innerText = comment.content
+
+        cosnt 
+
+        commentContentDiv.appendChild(commentContent)
+        commentArticle.appendChild(commentContentDiv)
+    })
+
+    const commentForm = commentDiv.querySelector('form')
+    const commentBodyInput = commentForm.firstElementChild
+    const commentPostButton = commentForm.lastElementChild
+    commentPostButton.addEventListener('click', function(event){
+        event.preventDefault()
+        const commentArticle = document.createElement('article')
+        
+        commentList.appendChild(commentArticle)
+    
+        const paperPlane = document.createElement('span')
+        paperPlane.className = "icon solid fa-paper-plane"
+        commentArticle.appendChild(paperPlane)
+    
+        const commentContentDiv = document.createElement('div')
+        // commentArticle.appendChild(commentContentDiv)
+    
+        const commenterUsername = document.createElement('h3')
+        commenterUsername.innerText = `${currentUser.username}`
+        // fetch(`http://localhost:3000/users/${comment.user_id}`)
+        // .then(resource => resource.json())
+        // .then((user) => {
+        //     commenterUsername.innerText = `${user.username}`
+        // })
+        commentContentDiv.appendChild(commenterUsername)
+
+        const commentContent = document.createElement('p')
+        commentContent.innerText = commentBodyInput.value
+        commentContentDiv.appendChild(commentContent)
+        commentArticle.appendChild(commentContentDiv)
+
+        fetch(`http://localhost:3000/comments`, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify({
+                content: commentBodyInput.value,
+                user_id: currentUser.id,
+                shoe_id: tileData.id
+            })
+        })
+        .then(response => response.json())
+        .then(function(object){
+            console.log(object)
+            commentBodyInput.value = ""
+        })
+    })
+    // commentBodyInput.value = ""
+    // debugger
+}
+
+function toggleShowComments(commentDiv){
+    if (commentDiv.style.display === "none"){
+        commentDiv.style.display = "block"
+    } else {
+        commentDiv.style.display = "none"
+    }
 }
 
 function renderDealOfTheDayItem(tileData){
@@ -967,18 +1098,18 @@ function removeAllChildNodes(parent) {
     }
 }
     
-    // function deleteComment(commentLI){
-    //     fetch(`http://localhost:3000/comments/${commentLI.dataset.commentId}`, {
-    //         method: 'DELETE',
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //             Accept: "application/json"
-    //         }
-    //     })
-    //     .then(response => response.json())
-    //     .then(function(object){
-    //         console.log(object)
-    //     })
-    //     let commentParent = commentLI.parentElement
-    //     commentParent.removeChild(commentLI)
-    // }
+// function deleteComment(commentArticle){
+//     fetch(`http://localhost:3000/comments/${commentArticle.dataset.commentId}`, {
+//         method: 'DELETE',
+//         headers: {
+//             "Content-Type": "application/json",
+//             Accept: "application/json"
+//         }
+//     })
+//     .then(response => response.json())
+//     .then(function(object){
+//         console.log(object)
+//     })
+//     let commentParent = commentArticle.parentElement
+//     commentParent.removeChild(commentArticle)
+// }
