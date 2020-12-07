@@ -394,34 +394,40 @@ function decrementStock(shoe, parentFunc){
     })
 }
 
-function toggleShowPaymentScreen(){
+function ShowPaymentScreen(){
     const paymentScreenDiv = document.querySelector('#payment-screen')
-    if (paymentScreenDiv.style.display === "none"){
-        hidePage()
-        paymentScreenDiv.style.display = "block"
+    // debugger
+    hidePage()
+    paymentScreenDiv.style.display = "block"
+    const submitPaymentButton = document.querySelector('#payment-submit-button')
+    submitPaymentButton.addEventListener('click', function(event){
+        // debugger
+        event.preventDefault()
+        const miniPostsDiv = document.querySelector('.mini-posts')
+        removeAllChildNodes(miniPostsDiv)
+        const cartTotal = document.querySelector('#cart-total')
+        cartTotal.innerText = "$0"
 
-        const submitPaymentButton = document.querySelector('#payment-submit-button')
-        submitPaymentButton.addEventListener('click', function(event){
-            event.preventDefault()
-            const miniPostsDiv = document.querySelector('.mini-posts')
-            removeAllChildNodes(miniPostsDiv)
-            const cartTotal = document.querySelector('#cart-total')
-            cartTotal.innerText = "$0"
-
-            paymentScreenDiv.style.display = "none"
-            showThankYouPage()
-        })
-
-        const cancelButton = document.querySelector('#cancel-transaction')
-        cancelButton.addEventListener('click', function(event){
-            event.preventDefault()
-            toggleShowPaymentScreen()
-            // showPage()
-        })
-    } else {
         paymentScreenDiv.style.display = "none"
-        showPage()
-    }
+        showThankYouPage()
+    })
+
+    const cancelButton = document.querySelector('#cancel-transaction')
+    cancelButton.addEventListener('click', function(event){
+        event.preventDefault()
+        hidePaymentScreen()
+        // debugger
+        // showPage()
+    })
+}
+
+function hidePaymentScreen(){
+    const paymentScreenDiv = document.querySelector('#payment-screen')
+    // debugger
+    const miniPostsDiv = document.querySelector('.mini-posts')
+    removeAllChildNodes(miniPostsDiv)
+    paymentScreenDiv.style.display = "none"
+    showPage()
 }
 
 function showThankYouPage(){
@@ -464,7 +470,7 @@ function renderSideBar(addSum = 0){
         // removeAllChildNodes(miniPostsDiv)
         // const cartTotal = document.querySelector('#cart-total')
         // cartTotal.innerText = "$0"
-        toggleShowPaymentScreen()
+        ShowPaymentScreen()
     })
     let totalCalc = document.querySelector('#cart-total')
     let initialInt = totalCalc.innerText.split("$")[1]
@@ -804,7 +810,7 @@ function renderItemPage(tileData){
         const commentContent = document.createElement('p')
         commentContent.innerText = comment.content
 
-        cosnt 
+        // cosnt 
 
         commentContentDiv.appendChild(commentContent)
         commentArticle.appendChild(commentContentDiv)
