@@ -12,7 +12,12 @@
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body class="is-preload">
-
+		<!-- <div id="hidden-storage">
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</div> -->
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -32,6 +37,7 @@
 									
 									<a href="index.html" class="logo"><h2>Good For The Sole</h2></a>
 									<ul class="icons">
+										<!-- <li id="current-username"><h2></h2></li> -->
 										<li class="sign-up"><strong>Sign Up</strong></li>
 										<li class="log-in">Log In</li>
 										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -39,14 +45,58 @@
 										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+										<li id="current-username"><h2></h2></li>
 										<!-- <li><button>Your Cart</button></li> -->
 									</ul>
 									<!-- <a href="#menu" class="box-shadow-menu">
 									</a> -->
 								</header>
-							
+							<div id="thank-you-page" style="display: none;">
+								
+								<br>
+								<br>
+								<br>
+								<br>
+								<h1 style="margin-left: 37%;">Thank You</h1><br>
+								<h1 style="margin-left: 30%;">For Your Business!!</h1><br>
+								<h1 id="user-name-celebration-display" style="margin-left: 46%;">🎉</h1><br><br><br><br>
+							</div>
+							<div id="payment-screen" style="display: none;">
+								<!-- <div> -->
+									<div style="margin-bottom: 7em;">
+									</div>
+									<h1 class="cart-text">Complete Checkout</h1><br>
+									<div style="display: block;">
+										<form method="post" action="#">
+											<label for="card-type-input">Credit Card Carrier:</label>
+											<select id="card-type-input" name="card-type-input">
+												<option value="Visa">Visa</option>
+												<option value="MasterCard">MasterCard</option>
+												<option value="American Express">American Express</option>
+												<option value="Discover">Discover</option>
+											</select><br>
+											<div class="col-6 col-12-xsmall" style="margin: 0px 40em 0px 0px;">
+												<label for="card-number-input">Credit Card Number:</label>
+												<input id="card-number-input" type="password" name="card-number-input" placeholder="XXXX-XXXX-XXXX-XXXX">
+											</div><br>
+											<div class="col-6 col-12-xsmall" style="margin: 0px 40em 0px 0px;">
+												<label for="safety-number-input">Credit Card CVV:</label>
+												<input id="safety-number-input" type="password" name="safety-number-input" placeholder="XXX">
+											</div><br>
+											<div class="col-6 col-12-xsmall" style="margin: 0px 40em 0px 0px;">
+												<label for="card-name">Name on Card:</label>
+												<input id="card-name" type="text" name="card-name">
+											</div><br>
+											<div class="col-12">
+												<input type="submit" value="Confirm" class="primary" id="payment-submit-button">
+												<button style="margin-left: 1em;" id="cancel-transaction">Cancel</button>
+											</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+										</form>
+									</div>
+								<!-- </div> -->
+							</div>
 							<div id="login-target" style="display: none;">
-								<div id="login-target" style="display: block;">
+								<div style="display: block;">
 									<div style="margin-bottom: 7em;">
 									</div>
 									<h1 class="login-text">Login</h1><br>
@@ -60,12 +110,14 @@
 											</div><br>
 											<div class="col-6 col-12-xsmall" style="margin: 0px 40em 0px 0px;">
 												<input id="login-pasword-input" type="password" name="password-input" placeholder="Password">
-											</div><br><div class="col-12">
+											</div><br>
+											<div class="col-12">
 												<input type="submit" value="Login" class="primary" id="login-submit-button">
 												<button style="margin-left: 1em;" id="login-screen-sign-up">Sign Up</button>
 											</div>
 										</form>
-							</div></div><br><br><br><br><br><br><br><br>
+									</div>
+								</div><br><br><br><br><br><br><br><br>
 							</div>
 							<div id="sign-up-target" style="display: none;">
 								<div id="sign-up-target"><div style="margin-bottom: 7em;"></div><h1 class="signup-text">Sign-Up</h1><br><div style="display: block;"><form method="post" action="#">
@@ -216,16 +268,6 @@
 										<li>
 											<span class="opener">Browse</span>
 											<ul id="browse-by-ul">
-												<!-- <li id="brand-drop-down"><span class="opener">Brand</span>
-													<ul style="display: none;">
-														<li id="nike">Nike</li>
-														<li id="air-jordan">Air Jordan</li>
-														<li id="adidas">Adidas</li>
-														<li id="reebok">Reebok</li>
-														<li id="new-balance">New Balance</li>
-														<li id="converse">Converse</li>
-													</ul>
-												</li> -->
 												<li><a class="browse-by">Price</a></li>
 												<li><a class="browse-by">Men's Shoes</a></li>
 												<li><a class="browse-by">Women's Shoes</a></li>

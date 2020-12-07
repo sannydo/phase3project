@@ -7,7 +7,7 @@ class ShoesController < ApplicationController
     def show
         shoe = Shoe.find_by(id: params[:id])
         if shoe
-            render json: shoe.slice(:id, :name, :brand, :image_url)
+            render json: shoe.slice(:id, :name, :brand, :image_url, :alt_img)
         else
             render json: { message: 'Item not found' }
         end

@@ -34,9 +34,9 @@ function renderPopularShoes(){
         addTilesToPage(newData)
         // renderDealOfTheDay(newData)
 
-        renderHeader()
-        renderLoginScreen()
-        renderSignUpScreen()
+        // renderHeader()
+        // renderLoginScreen()
+        // renderSignUpScreen()
     })
 }
 
@@ -77,9 +77,13 @@ function renderLoginScreen(){
         .then((data) => {
             data.forEach(function(user){
                 if (user.username === usernameInput.value && user.password === passwordInput.value){
+                    // debugger
+                    // console.log(user)
+                    // return user
                     showPage()
                     toggleHideLoginScreen()
                     hideIncorrectPasswordMessage()
+                    setCurrentUser(user)
                 } else {
                     //incorrect username or password message
                     errorMessageDiv.style.display = "block"
@@ -185,13 +189,26 @@ function renderSignUpScreen(){
     })
 }
 
-// function setCurrentUser(user){
-//     
-//     const hiddenStorageDiv = document.querySelector('#hidden-storage')
-//     const currentUserP = hiddenStorageDiv.querySelector('p')
-//     // currentUserP.style.display = "none"
-//     currentUserP.innerText = `${user}`
-// }
+let currentUser = {}
+
+function setCurrentUser(user){
+    
+    // const hiddenStorageDiv = document.querySelector('#hidden-storage')
+    // const currentUserP = hiddenStorageDiv.querySelector('p')
+    // currentUserP.style.display = "none"
+    // currentUserP.innerText = `${user.name}`
+    currentUser.id = user.id
+    currentUser.name = user.name
+    currentUser.username = user.username
+    currentUser.password = user.password
+    currentUser.shoe_size = user.shoe_size
+    currentUser.shoe_width = user.shoe_width
+    // debugger
+    hideHeaderButtons()
+    // debugger
+    const currrentUserUsername = document.querySelector('#current-username').firstElementChild
+    currrentUserUsername.innerText = currentUser.username
+}
 
 // function toggleShowPage(){
 //     // 
@@ -369,6 +386,45 @@ function decrementStock(shoe, parentFunc){
     })
 }
 
+function toggleShowPaymentScreen(){
+    const paymentScreenDiv = document.querySelector('#payment-screen')
+    if (paymentScreenDiv.style.display === "none"){
+        hidePage()
+        paymentScreenDiv.style.display = "block"
+
+        const submitPaymentButton = document.querySelector('#payment-submit-button')
+        submitPaymentButton.addEventListener('click', function(event){
+            event.preventDefault()
+            const miniPostsDiv = document.querySelector('.mini-posts')
+            removeAllChildNodes(miniPostsDiv)
+            const cartTotal = document.querySelector('#cart-total')
+            cartTotal.innerText = "$0"
+
+            paymentScreenDiv.style.display = "none"
+            showThankYouPage()
+        })
+
+        const cancelButton = document.querySelector('#cancel-transaction')
+        cancelButton.addEventListener('click', function(event){
+            event.preventDefault()
+            toggleShowPaymentScreen()
+            // showPage()
+        })
+    } else {
+        paymentScreenDiv.style.display = "none"
+        showPage()
+    }
+}
+
+function showThankYouPage(){
+    const thankYouPageDiv = document.querySelector('#thank-you-page')
+    thankYouPageDiv.style.display = "block"
+
+    const userNameDisplay = document.querySelector('#user-name-celebration-display')
+    userNameDisplay.innerText = `${currentUser.name} 🎉`
+    userNameDisplay.style.marginLeft = "33%"
+}
+
 function renderSideBar(addSum = 0){
     const yourCartDiv = document.querySelector('.mini-posts').parentElement
     const checkoutButton = yourCartDiv.querySelector('.actions').lastElementChild.firstElementChild
@@ -376,10 +432,11 @@ function renderSideBar(addSum = 0){
     
     checkoutButton.addEventListener('click', function(event){
         event.preventDefault()
-        const miniPostsDiv = document.querySelector('.mini-posts')
-        removeAllChildNodes(miniPostsDiv)
-        const cartTotal = document.querySelector('#cart-total')
-        cartTotal.innerText = "$0"
+        // const miniPostsDiv = document.querySelector('.mini-posts')
+        // removeAllChildNodes(miniPostsDiv)
+        // const cartTotal = document.querySelector('#cart-total')
+        // cartTotal.innerText = "$0"
+        toggleShowPaymentScreen()
     })
     let totalCalc = document.querySelector('#cart-total')
     let initialInt = totalCalc.innerText.split("$")[1]
@@ -414,9 +471,6 @@ function renderSideBar(addSum = 0){
         event.preventDefault()
         clearItemTiles()
         debugger
-        // if (repeatFlag){
-        //     clearItemTiles
-        // }
         fetch('http://localhost:3000/shoes')
         .then(resource => resource.json())
         .then((data) => {
@@ -424,12 +478,10 @@ function renderSideBar(addSum = 0){
             addTilesToPage(data)
             renderDealOfTheDay(data)
             
-            renderHeader()
-            renderLoginScreen()
-            renderSignUpScreen()
+            // renderHeader()
+            // renderLoginScreen()
+            // renderSignUpScreen()
         })
-
-        const repeatFlag = true
     })
 }
 
@@ -534,15 +586,22 @@ function sortTilesByMen(){
     .then(resource => resource.json())
     .then((data) => {
         // let halfwayPoint = 32
-        data = data.slice(23)
+        // data = data.slice(23)
+        data.forEach(function(shoe){
+            if (shoe.name.includes("Wmns")){
+
+            } else {
+
+            }
+        })
 
         clearItemTiles()
         addTilesToPage(data)
         renderDealOfTheDay(data)
 
-        renderHeader()
-        renderLoginScreen()
-        renderSignUpScreen()
+        // renderHeader()
+        // renderLoginScreen()
+        // renderSignUpScreen()
     })
 }
 
@@ -557,9 +616,9 @@ function sortTilesByWomen(){
         addTilesToPage(data)
         renderDealOfTheDay(data)
 
-        renderHeader()
-        renderLoginScreen()
-        renderSignUpScreen()
+        // renderHeader()
+        // renderLoginScreen()
+        // renderSignUpScreen()
     })
 }
 
@@ -580,9 +639,9 @@ function sortTilesByBrand(brandName){
         addTilesToPage(brandedShoes)
         renderDealOfTheDay(brandedShoes)
 
-        renderHeader()
-        renderLoginScreen()
-        renderSignUpScreen()
+        // renderHeader()
+        // renderLoginScreen()
+        // renderSignUpScreen()
     })
 }
 
@@ -596,9 +655,9 @@ function sortTilesByPrice(){
         addTilesToPage(data)
         renderDealOfTheDay(data)
 
-        renderHeader()
-        renderLoginScreen()
-        renderSignUpScreen()
+        // renderHeader()
+        // renderLoginScreen()
+        // renderSignUpScreen()
     })
 }
 
