@@ -14,6 +14,13 @@ class ShoesController < ApplicationController
         
     end
 
+    def shoes_price_index
+        shoes = Shoe.all
+        new_shoes =  shoes.sort_by { |shoe| shoe[:price].to_i }
+
+        render json: new_shoes, except: [:created_at, :updated_at, :description], include: [:shopping_carts, :comments]
+    end
+
     def update
         shoe = Shoe.find(params[:id])
         shoe.update_attributes(shoe_params)

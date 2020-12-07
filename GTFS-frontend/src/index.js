@@ -520,17 +520,17 @@ function toggleShowBrowseByOptions(){
         var browseByLiNodeList = browseByUl.childNodes
         var browseByLiArray = Array.prototype.slice.call(browseByLiNodeList)
         // debugger
-        var browseByLiArray2 = browseByLiArray.slice(3, 4)
+        var browseByLiArray2 = browseByLiArray.slice(1, 2)
         // browseByLiArray2.push(browseByLiArray.slice(3, 4))
+        browseByLiArray2.push(browseByLiArray.slice(3, 4))
         browseByLiArray2.push(browseByLiArray.slice(5, 6))
-        browseByLiArray2.push(browseByLiArray.slice(7, 8))
         // debugger
         var browseByLiArray3 = browseByLiArray2.flat()
         browseByLiArray3.forEach(function(li){
             li.style.display = "block"
         })
 
-        var browseOpt1 = browseByLiArray3[0]
+        var browseOpt1 = browseByLiArray3[2]
         browseOpt1.addEventListener('click', function(event){
             event.preventDefault()
             sortTilesByWomen()
@@ -542,7 +542,7 @@ function toggleShowBrowseByOptions(){
             sortTilesByMen()
         })
 
-        var browseOpt3 = browseByLiArray3[2]
+        var browseOpt3 = browseByLiArray3[0]
         browseOpt3.addEventListener('click', function(event){
             event.preventDefault()
             sortTilesByPrice()
@@ -613,19 +613,23 @@ function sortTilesByMen(){
     fetch('http://localhost:3000/shoes')
     .then(resource => resource.json())
     .then((data) => {
-        // let halfwayPoint = 32
-        // data = data.slice(23)
+        let newData = [0]
         data.forEach(function(shoe){
-            if (shoe.name.includes("Wmns")){
-
-            } else {
-
+            
+            if (!shoe.name.includes("Wmns")){
+                newData.push(shoe)
             }
         })
+        // let newData = [0]
+        // if (!shoe.name.includes("Wmns")){
+        //     newData.push(shoe)
+        // }
 
+        newData = newData.slice(1)
+        
         clearItemTiles()
-        addTilesToPage(data)
-        renderDealOfTheDay(data)
+        addTilesToPage(newData)
+        renderDealOfTheDay(newData)
 
         // renderHeader()
         // renderLoginScreen()
@@ -637,12 +641,18 @@ function sortTilesByWomen(){
     fetch('http://localhost:3000/shoes')
     .then(resource => resource.json())
     .then((data) => {
-        // let halfwayPoint = 23
-        data = data.slice(1, 23)
+        let newData = [0]
+        data.forEach(function(shoe){
+            
+            if (shoe.name.includes("Wmns")){
+                newData.push(shoe)
+            }
+        })
 
+        newData = newData.slice(1)
         clearItemTiles()
-        addTilesToPage(data)
-        renderDealOfTheDay(data)
+        addTilesToPage(newData)
+        renderDealOfTheDay(newData)
 
         // renderHeader()
         // renderLoginScreen()
@@ -674,7 +684,7 @@ function sortTilesByBrand(brandName){
 }
 
 function sortTilesByPrice(){
-    fetch('http://localhost:3000/shoes')
+    fetch('http://localhost:3000/shoes_price_index')
     .then(resource => resource.json())
     .then((data) => {
 
